@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  background: #070706;
+  color: #f3eadc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #070706;
+}
+
+::selection {
+  color: #05060a;
+  background: #d6aa5b;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10 lg:py-28;
+  }
+
+  .editorial-panel {
+    @apply border border-paper/[.12] bg-paper/[.035] shadow-editorial;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.32em] text-brass;
+  }
+
+  .premium-heading {
+    @apply text-4xl font-black leading-[0.95] text-paper sm:text-6xl;
+  }
+
+  .muted-copy {
+    @apply text-sm leading-7 text-paper/[.66] sm:text-base;
+  }
+
+  .serif-mark {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}

@@ -11,13 +11,13 @@ function Footer() {
           </p>
         </div>
         <div className="flex items-center gap-3 text-paper/[.58]">
-          <a aria-label="GitHub" href="#" className="grid h-10 w-10 place-items-center border border-paper/[.12] bg-paper/[.04] transition hover:border-brass hover:text-brass">
+          <a aria-label="GitHub" href="https://github.com/Aascharyax" className="grid h-10 w-10 place-items-center border border-paper/[.12] bg-paper/[.04] transition hover:border-brass hover:text-brass">
             <Github size={18} />
           </a>
-          <a aria-label="LinkedIn" href="#" className="grid h-10 w-10 place-items-center border border-paper/[.12] bg-paper/[.04] transition hover:border-brass hover:text-brass">
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/in/aascharya-paudel/" className="grid h-10 w-10 place-items-center border border-paper/[.12] bg-paper/[.04] transition hover:border-brass hover:text-brass">
             <Linkedin size={18} />
           </a>
-          <a aria-label="Email" href="#contact" className="grid h-10 w-10 place-items-center border border-paper/[.12] bg-paper/[.04] transition hover:border-brass hover:text-brass">
+          <a aria-label="Email" href="aascharyapaudel95@gmail.com" className="grid h-10 w-10 place-items-center border border-paper/[.12] bg-paper/[.04] transition hover:border-brass hover:text-brass">
             <Mail size={18} />
           </a>
         </div>

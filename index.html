@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f5f5f7" />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light dark" />
     <meta
       name="description"
       content="Portfolio website for Aascharya Paudel, student, future engineer, and developer."
@@ -15,8 +15,28 @@
     <meta property="og:url" content="https://aascharyapaudel.com.np/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Aascharya Paudel | Portfolio</title>
-    <script type="module" crossorigin src="/assets/index-mwptliVK.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D4rcJqsq.css">
+    <script>
+      // Apply the saved (or system) theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var theme =
+            saved === 'dark' || saved === 'light'
+              ? saved
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          var root = document.documentElement;
+          root.setAttribute('data-theme', theme);
+          root.style.colorScheme = theme;
+          document
+            .querySelector('meta[name="theme-color"]')
+            .setAttribute('content', theme === 'dark' ? '#0c0c0e' : '#f5f5f7');
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-BKcwUC5P.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-l5-perdw.css">
   </head>
   <body>
     <div id="root"></div>

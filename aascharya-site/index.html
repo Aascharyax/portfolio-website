@@ -1,0 +1,1439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#E8EBE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1216" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%273%27%20fill%3D%27%23B4372C%27/%3E%3Ctext%20x%3D%2716%27%20y%3D%2722%27%20font-family%3D%27Georgia%2Cserif%27%20font-size%3D%2715%27%20font-weight%3D%27800%27%20text-anchor%3D%27middle%27%20fill%3D%27%23F6EDE8%27%3EAP%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://aascharyapaudel.com.np/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aascharya Paudel">
+<meta property="og:title" content="Aascharya Paudel">
+<meta property="og:description" content="Curious about code. Always building.">
+<meta property="og:url" content="https://aascharyapaudel.com.np/">
+<meta property="og:image" content="https://aascharyapaudel.com.np/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "Person",
+ "name": "Aascharya Paudel",
+ "url": "https://aascharyapaudel.com.np/",
+ "description": "Portfolio of Aascharya Paudel. Student, future engineer, developer from Pokhara, Nepal. Curious about code. Always building.",
+ "jobTitle": "Student and developer",
+ "homeLocation": {
+  "@type": "Place",
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Pokhara",
+   "addressCountry": "NP"
+  }
+ }
+}</script>
+<style>:root{color-scheme:light}</style>
+<title>Aascharya Paudel</title>
+<meta name="description" content="Portfolio of Aascharya Paudel. Student, future engineer, developer from Pokhara, Nepal. Curious about code. Always building.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Serif+Devanagari:wght@500&family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: the terminal is the page. A header with a Terminal/Plain switch, one big sumi-black terminal on washi,
+   a permanent song bar along the bottom, and an Enter screen that unlocks sound. */
+:root{
+  --paper:#E8EBE6; --paper-2:#DCE0DA; --ink:#15191D; --ink-soft:#505A61; --line:#C2C8C0; --ai:#2B4F72; --shu:#B4372C;
+  --term-bg:#0F1418; --term-bar:#171E24; --term-fg:#D9DFD7; --term-dim:#76828C; --term-ac:#7FA8CC; --term-ok:#9FC48F; --term-err:#E5857A; --term-line:#252F38;
+  --hf:#15191D; --hi:#F2F5F0; --hs:#3A444B; --sky1:#F3E7D8; --sky2:#FAF5EC; --sun:#C8402F; --r1:#D6DBD7; --r2:#B3C0C3; --r3:#7F949D;
+  --f-display:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D1216; --paper-2:#131A1F; --ink:#E3E8E1; --ink-soft:#94A0A8; --line:#232C34; --ai:#86AFD3;
+    --hf:#F2F5F0; --hi:#15191D; --hs:#B9C3CA; --sky1:#0B121C; --sky2:#1C2B40; --sun:#E9E4D2; --r1:#223347; --r2:#182534; --r3:#101A26; --term-bg:#070A0D; --term-bar:#0E1418; --term-line:#1F2830; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D1216; --paper-2:#131A1F; --ink:#E3E8E1; --ink-soft:#94A0A8; --line:#232C34; --ai:#86AFD3;
+  --hf:#F2F5F0; --hi:#15191D; --hs:#B9C3CA; --sky1:#0B121C; --sky2:#1C2B40; --sun:#E9E4D2; --r1:#223347; --r2:#182534; --r3:#101A26; --term-bg:#070A0D; --term-bar:#0E1418; --term-line:#1F2830; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0; background:var(--paper); color:var(--ink); font-family:var(--f-body); font-size:16px; line-height:1.7;
+  padding-block:16px 96px;
+  padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+::selection{background:var(--ai); color:var(--paper)}
+:focus-visible{outline:2px solid var(--ai); outline-offset:3px}
+button{font:inherit; color:inherit; cursor:pointer}
+a{color:inherit}
+.app{max-width:1040px; margin:0 auto; position:relative; z-index:1}
+
+/* header */
+.top{display:flex; align-items:center; justify-content:space-between; gap:8px 24px; flex-wrap:wrap}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none; min-width:0}
+.brand b{font-family:var(--f-display); font-weight:700; font-size:1.1rem}
+.nav{display:flex; align-items:center; gap:4px 24px; flex-wrap:wrap; font-family:var(--f-mono); font-size:.8rem}
+.nav a{color:var(--ink-soft); text-decoration:none; padding:6px 0}
+.nav a:hover{color:var(--ink)}
+.ctl{background:none; border:1px solid var(--line); border-radius:3px; padding:6px 12px; font-family:var(--f-mono); font-size:.76rem}
+.ctl:hover{border-color:var(--ai)}
+
+/* hero: a flat mountain */
+.scene{position:relative; margin-top:14px; height:clamp(340px,52vh,440px); border-radius:6px; overflow:hidden; isolation:isolate; background:var(--paper-2); border:1px solid var(--line)}
+.scene-in{position:relative; z-index:2; padding:clamp(28px,6vw,64px) clamp(20px,5vw,56px) 0; color:var(--hf)}
+.scene h1{margin:0; font-family:var(--f-display); font-weight:800; font-size:clamp(2.8rem,9vw,5.6rem); line-height:1.02; letter-spacing:-.02em; text-wrap:balance}
+.scene h1 .w{display:inline-block; white-space:nowrap}
+.scene h1 .ch{display:inline-block}
+.scene .lead{margin:18px 0 0; font-size:clamp(1.1rem,2.4vw,1.4rem)}
+.scene .roles{margin:4px 0 0; color:var(--hs)}
+.scene .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:26px}
+.scene .btn{border-color:var(--hf); color:var(--hf)}
+.scene .btn.main{background:var(--hf); color:var(--hi)}
+.scene .btn:hover{border-color:var(--ai)}
+a.btn{text-decoration:none; display:inline-block}
+@media (prefers-reduced-motion:no-preference){
+  .scene.in h1 .ch{animation:rise .9s cubic-bezier(.2,.7,.2,1) both; animation-delay:calc(var(--i) * 38ms + 150ms)}
+  .scene.in .lead{animation:fade .9s ease .75s both} .scene.in .roles{animation:fade .9s ease .9s both} .scene.in .cta{animation:fade .9s ease 1.05s both}
+  .scene.in   @keyframes rise{from{opacity:0; transform:translateY(.45em)}to{opacity:1; transform:none}}
+  @keyframes fade{from{opacity:0; transform:translateY(8px)}to{opacity:1; transform:none}}
+}
+
+/* sections */
+.psec{display:grid; grid-template-columns:150px minmax(0,1fr); gap:14px 40px; padding-top:44px; margin-top:64px; border-top:1px solid var(--line)}
+.psec h2{margin:0; font-family:var(--f-display); font-weight:700; font-size:1.7rem; line-height:1.2}
+.psec p{margin:0 0 14px; max-width:60ch}
+.psec > div, .psec > ul, .psec > dl{min-width:0}
+.work{list-style:none; margin:0; padding:0; display:grid; gap:30px}
+.work h3{margin:0; font-family:var(--f-display); font-weight:700; font-size:1.4rem; line-height:1.3}
+.work p{margin:4px 0 6px; color:var(--ink-soft)}
+.work small{font-family:var(--f-mono); font-size:.76rem; color:var(--ink-soft)}
+.skills{margin:0; display:grid; grid-template-columns:max-content minmax(0,1fr); gap:8px 28px}
+.skills dt{color:var(--ink-soft)} .skills dd{margin:0}
+.mail{font-family:var(--f-display); font-weight:700; font-size:clamp(1.4rem,4.2vw,2.2rem); overflow-wrap:anywhere; margin:0 0 10px !important}
+.mail a{text-decoration:none; border-bottom:1px solid var(--line)}
+.mail a:hover{border-color:var(--ai)}
+.links{list-style:none; margin:0 0 16px; padding:0; font-family:var(--f-mono); font-size:.85rem}
+.links span{color:var(--ink-soft); display:inline-block; min-width:6.5em}
+.tnote{color:var(--ink-soft); margin:0 0 14px !important}
+.tnote kbd{font-family:var(--f-mono); font-size:.85em; border:1px solid var(--line); border-radius:3px; padding:0 .4em}
+
+/* song pill */
+.song{position:fixed; left:max(16px,env(safe-area-inset-left,0px)); bottom:calc(16px + env(safe-area-inset-bottom,0px)); z-index:20; display:flex; align-items:center; gap:10px; max-width:calc(100vw - 32px);
+  padding:6px 8px 6px 8px; background:var(--paper); border:1px solid var(--line); border-radius:999px; box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.disc{width:34px; height:34px; flex:none; border-radius:50%; background:radial-gradient(circle,#E9ECE7 0 4%,#B4372C 5% 24%,transparent 25%),repeating-radial-gradient(circle,#12161A 0 2px,#222930 2px 4px)}
+.disc.spin{animation:spin 3.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.bar-t{min-width:0; line-height:1.25; max-width:190px}
+.bar-t b{display:block; font-family:var(--f-display); font-weight:700; font-size:.95rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.bar-t small{display:block; font-family:var(--f-mono); font-size:.66rem; color:var(--ink-soft); overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.song .ctl{border-radius:999px; padding:6px 14px}
+.song .ctl:disabled{opacity:.45; cursor:not-allowed}
+
+/* terminal: a small riced desktop */
+.desk{--term-bg:#1e1e2e; --term-bar:#181825; --term-fg:#cdd6f4; --term-dim:#7f849c; --term-line:#313244; --term-ac:#89b4fa; --term-ok:#a6e3a1; --term-err:#f38ba8;
+  --red:#f38ba8; --green:#a6e3a1; --yellow:#f9e2af; --blue:#89b4fa; --magenta:#cba6f7; --cyan:#94e2d5; --acc:#cba6f7; --bold:#cdd6f4; --op:90%; --blur:8px; --gap:10px; --fs:13.5px;
+  position:relative; height:clamp(500px,76vh,680px); display:flex; flex-direction:column; gap:var(--gap); padding:clamp(10px,1.8vw,16px); border-radius:10px; overflow:hidden; isolation:isolate;
+  background:var(--wall,#11111b) center/cover no-repeat; color:var(--term-fg)}
+.desk.full{position:fixed; inset:0; z-index:90; height:auto; border-radius:0}
+.pbar{display:flex; align-items:center; gap:var(--gap); flex:none; height:30px; font-family:var(--f-mono); font-size:.72rem; color:var(--term-fg); white-space:nowrap}
+.pill{display:flex; align-items:center; gap:12px; height:30px; padding:0 12px; border-radius:15px; min-width:0; background:color-mix(in srgb,var(--term-bar) 92%,transparent); border:1px solid color-mix(in srgb,var(--term-fg) 12%,transparent); box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.pill:first-child{padding-left:5px}
+.pb-full{cursor:pointer; color:var(--term-dim); font-size:1rem; line-height:1} .pb-full:hover{color:var(--acc)}
+.pb-logo{display:inline-grid; place-items:center; width:22px; height:22px; border-radius:50%; background:var(--acc); color:var(--term-bar); font-weight:800}
+.pb-ws{display:flex; gap:3px}
+.pb-ws button{background:none; border:0; padding:1px 7px; border-radius:3px; color:var(--term-dim); font:inherit}
+.pb-ws button:hover{color:var(--term-fg)}
+.pb-ws button.on{background:var(--acc); color:var(--term-bar); font-weight:700}
+.pb-title{flex:0 1 auto; margin:0 auto; color:var(--term-dim); overflow:hidden} .pb-title #tTitle{overflow:hidden; text-overflow:ellipsis}
+.pb-r{margin-left:0; gap:14px}
+.pb-m{background:none; border:0; padding:0; font:inherit; color:var(--term-fg)}
+.pb-m i{font-style:normal; margin-right:.5em}
+.pb-song{max-width:15ch; overflow:hidden; text-overflow:ellipsis; cursor:pointer}
+.c-cpu i{color:var(--green)} .c-mem i{color:var(--yellow)} .c-clk i{color:var(--blue)} .c-song i{color:var(--magenta)}
+.tiles{flex:1; min-height:0; display:grid; grid-template-columns:minmax(0,1.75fr) minmax(0,1fr); gap:var(--gap)}
+.term{position:relative; min-height:0; min-width:0; display:flex; flex-direction:column; background:color-mix(in srgb,var(--term-bg) var(--op),transparent); color:var(--term-fg); border:1px solid color-mix(in srgb,var(--term-fg) 12%,transparent); border-radius:12px; overflow:hidden;
+  backdrop-filter:blur(var(--blur)); -webkit-backdrop-filter:blur(var(--blur)); box-shadow:0 14px 44px rgba(0,0,0,.4)}
+.term::after{content:""; position:absolute; inset:0; z-index:6; border-radius:inherit; padding:2px; pointer-events:none; opacity:0; transition:opacity .2s;
+  background:linear-gradient(135deg,var(--acc),var(--blue) 55%,var(--cyan)); -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.term:focus-within::after{opacity:1}
+.side{display:grid; grid-template-rows:auto 150px auto; align-content:start; gap:var(--gap); min-height:0; min-width:0}
+.tile{min-height:0; min-width:0; display:flex; flex-direction:column; overflow:hidden; background:color-mix(in srgb,var(--term-bg) var(--op),transparent); border:1px solid color-mix(in srgb,var(--term-fg) 14%,transparent); border-radius:12px;
+  backdrop-filter:blur(var(--blur)); -webkit-backdrop-filter:blur(var(--blur)); font-family:var(--f-mono); font-size:.72rem; line-height:1.5; color:var(--term-fg); box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.tile h4{margin:0; display:flex; justify-content:space-between; padding:5px 12px; font-size:.7rem; font-weight:500; color:var(--term-dim); border-bottom:1px solid var(--term-line); background:color-mix(in srgb,var(--term-bar) var(--op),transparent)}
+.tile h4 i{font-style:normal; opacity:.7}
+.tl-b{padding:9px 12px; min-height:0}
+#tAbout .tl-b{display:flex; gap:12px; align-items:center}
+.logo{margin:0; font:inherit; font-size:.62rem; line-height:1.15; color:var(--acc); font-weight:700; white-space:pre; flex:none}
+.tl-t{min-width:0; white-space:pre-wrap; overflow-wrap:anywhere} .tl-t b{color:var(--acc); font-weight:600}
+#tCava canvas{flex:1; min-height:0; width:100%; display:block}
+.bigtime{font-size:1.9rem; font-weight:700; letter-spacing:.02em; color:var(--acc); line-height:1.1}
+.mini-cal{margin:6px 0 0; font:inherit; white-space:pre; color:var(--term-dim)} .mini-cal .rv{padding:0 1px}
+@media (max-width:900px){.tiles{grid-template-columns:minmax(0,1fr)} .side{display:none}}
+
+.term-body{flex:1; min-height:0; overflow:auto; padding:12px 16px 18px; font-family:var(--f-mono); font-size:var(--fs); line-height:1.55; cursor:text; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:var(--term-line) transparent}
+.term-body.alt{overflow:hidden}
+.tm-out>div{white-space:pre-wrap; word-break:break-word; min-height:1.55em}
+.tm-row{display:flex; align-items:center; gap:0; margin:0}
+[hidden]{display:none!important}
+.tm-row label{white-space:pre; display:inline-flex; align-items:center}
+.tm-row input{flex:1; min-width:0; background:none; border:0; outline:0; padding:0; color:var(--term-fg); font:inherit; caret-color:var(--acc); caret-shape:block}
+.tm-row.busy input{opacity:0}
+@media (pointer:coarse){.tm-row input{font-size:16px}}
+.pr .br,.pr .usr,.pr .pth,.pr .dl{color:var(--term-fg)}
+.pr .usr{color:var(--acc)} .pr .pth{color:var(--blue)}
+.pl{display:inline-flex; align-items:center; margin-right:.7em; white-space:pre}
+.pl b{display:inline-block; position:relative; font-weight:600; line-height:1.55em; padding:0 1.15em 0 .75em; margin-right:-.6em; color:var(--term-bar);
+  clip-path:polygon(0 0,calc(100% - .6em) 0,100% 50%,calc(100% - .6em) 100%,0 100%)}
+.pl b:first-child{border-radius:4px 0 0 4px; padding-left:.8em}
+.pl .p1{background:var(--acc); z-index:3} .pl .p2{background:var(--blue); z-index:2} .pl .p3{background:var(--cyan); z-index:1}
+.pl-sym{color:var(--green); font-weight:700; margin-left:.2em} .pl-sym.bad{color:var(--red)}
+.tm-inner{margin:8px 0 4px 2px; padding:2px 0 2px 12px; border-left:2px solid var(--acc)}
+.tm-inner.done{border-left-color:var(--term-line); opacity:.75}
+.d{color:var(--term-dim)} .a{color:var(--term-ac)} .g{color:var(--green)} .e{color:var(--red)} .b{font-weight:700; color:var(--bold)} .b.a{color:var(--acc)}
+.term a{color:var(--blue); text-underline-offset:3px}
+.arch{color:var(--acc); font-weight:700}
+.ls-d{color:var(--blue); font-weight:700} .ls-l{color:var(--cyan); font-weight:700} .ls-x{color:var(--green); font-weight:700}
+.gm{color:var(--red); font-weight:700} .gf{color:var(--magenta)} .gn{color:var(--green)} .gs{color:var(--cyan)} .rv{background:var(--term-fg); color:var(--term-bg)}
+.tm-out{container-type:inline-size}
+.help{display:grid; grid-template-columns:max-content minmax(0,1fr); gap:0 22px; margin-top:4px}
+.help>span:nth-child(odd){color:var(--acc)} .help>span.d:nth-child(odd){color:var(--term-dim); margin-top:.5em; text-transform:uppercase; font-size:.8em; letter-spacing:.08em}
+@container (max-width:620px){.help>span:empty{display:none} .help{grid-template-columns:minmax(0,1fr)} .help>span:nth-child(even){padding-left:2ch; margin-bottom:.35em}}
+.alt{position:absolute; inset:0; background:#000; z-index:3; overflow:hidden; font-family:var(--f-mono); font-size:var(--fs); line-height:1.55; color:var(--term-fg)}
+.alt-in{position:absolute; left:0; top:0; width:1px; height:1px; opacity:0; border:0; padding:0}
+.alt-x{position:absolute; right:10px; top:8px; z-index:5; background:rgba(0,0,0,.6); color:#9aa6b0; border:1px solid #2b3640; font:inherit; font-size:.72rem; padding:3px 10px; border-radius:3px; cursor:pointer}
+.alt-cv{display:block; position:absolute; inset:0}
+.alt-pre{margin:0; padding:0 4px; font:inherit; white-space:pre; overflow:hidden; height:100%; box-sizing:border-box}
+.alt-pre.ht,.alt-pre.vim{padding:4px 8px; background:var(--term-bg)}
+.ht-h{background:var(--acc); color:var(--term-bar)} .ht-f{background:var(--cyan); color:var(--term-bar); margin-left:6px}
+.vc{background:var(--term-fg); color:var(--term-bg)}
+.dpad{position:absolute; right:14px; bottom:14px; width:150px; height:150px; z-index:4}
+.dpad button{position:absolute; width:50px; height:50px; border-radius:50%; border:1px solid #2b3a48; background:rgba(255,255,255,.1); color:#fff; font-size:18px; touch-action:manipulation}
+.dp-u{left:50px; top:0} .dp-d{left:50px; bottom:0} .dp-l{left:0; top:50px} .dp-r{right:0; top:50px}
+.chips{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px}
+.chip{background:none; border:1px solid var(--line); padding:5px 11px; border-radius:3px; font-family:var(--f-mono); font-size:.76rem; color:var(--ink-soft)}
+.chip:hover{border-color:var(--ai); color:var(--ai)}
+
+/* enter screen */
+.gate{position:fixed; inset:0; z-index:100; background:var(--paper); display:grid; place-items:center; padding:24px; transition:opacity .5s}
+.gate.out{opacity:0; pointer-events:none}
+.gate-in{display:grid; gap:10px; justify-items:center; text-align:center}
+.gate .gate h2{margin:14px 0 0; font-family:var(--f-display); font-weight:800; font-size:clamp(2rem,7vw,3.2rem); line-height:1.1}
+.gate p{margin:0; color:var(--ink-soft)}
+.gate-btns{display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:22px}
+.btn{padding:12px 30px; border:1px solid var(--ink); border-radius:3px; background:none; font-family:var(--f-mono); font-size:.85rem}
+.btn.main{background:var(--ink); color:var(--paper)}
+.btn:hover{border-color:var(--ai)}
+.btn.main:hover{background:var(--ai); color:var(--paper)}
+
+@media (prefers-reduced-motion:reduce){.disc.spin{animation:none} .gate{transition:none}}
+@media (max-width:640px){
+  .psec{grid-template-columns:minmax(0,1fr); gap:10px; margin-top:48px; padding-top:32px}
+  .skills{grid-template-columns:minmax(0,1fr); gap:0} .skills dd{margin-bottom:12px}
+  .bar-t{display:none}
+  .help{grid-template-columns:minmax(0,1fr)} .help span:nth-child(even){margin-bottom:8px}
+  .nav{gap:2px 16px}
+  .desk{height:clamp(420px,72vh,600px); padding:8px; gap:8px} .pb-cpu,.pb-mem,.pb-song,.pb-title{display:none} .pbar{justify-content:space-between}
+  .scene{height:clamp(400px,66vh,520px)}
+}
+</style>
+</head>
+<body>
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Enter site">
+  <div class="gate-in">
+    
+    <h2>Aascharya Paudel</h2>
+    <p>Pokhara, Nepal</p>
+    <p>Best with sound on.</p>
+    <div class="gate-btns">
+      <button class="btn main" id="enterSound" type="button">Enter</button>
+      <button class="btn" id="enterQuiet" type="button">Enter silently</button>
+    </div>
+  </div>
+</div>
+
+<div class="app">
+  <header class="top">
+    <a class="brand" href="#top"><b>Aascharya Paudel</b></a>
+    <nav class="nav" aria-label="Sections"><a href="#work">Work</a><a href="#about">About</a><a href="#terminal">Terminal</a><a href="#contact">Contact</a><button class="ctl" id="thm" type="button">Night</button></nav>
+  </header>
+
+  <section class="scene" id="top" data-roles="student, future engineer, developer">
+    
+    <div class="scene-in">
+      <h1 id="heroName">Aascharya Paudel</h1>
+      <p class="lead">Curious about code. Always building.</p>
+      <p class="roles">Student, future engineer, developer. Based in Pokhara, Nepal.</p>
+      <div class="cta"><a class="btn main" href="#work">See my work</a><a class="btn" href="#terminal">Try the terminal</a></div>
+    </div>
+  </section>
+
+  <!-- EDIT: your projects. Keep data-slug, the h3, one p, and the stack and year spans. -->
+  <section class="psec" id="work"><h2>Work</h2><ul class="work" id="workList">
+    <li data-slug="pocket-notes"><h3>Pocket Notes</h3><p>A markdown notes app that works offline and keeps everything in your browser.</p><small><span class="stk">JavaScript, IndexedDB</span> · <span class="yr">2026</span></small></li>
+    <li data-slug="tiny-weather"><h3>Tiny Weather</h3><p>A one-screen weather page for Nepali cities with a forecast you can read at a glance.</p><small><span class="stk">HTML, CSS, API</span> · <span class="yr">2026</span></small></li>
+    <li data-slug="study-timer"><h3>Study Timer</h3><p>A focus timer with session history, built to stay out of the way.</p><small><span class="stk">Python, SQLite</span> · <span class="yr">2025</span></small></li>
+  </ul></section>
+
+  <!-- EDIT: your about text. One p per paragraph. -->
+  <section class="psec" id="about"><h2>About</h2><div id="aboutBody">
+    <p>I'm a student who builds things to understand them. Most of what I know about code came from making something small, breaking it, and making it again.</p>
+    <p>I'm aiming at engineering, and I treat every project as practice for that: read the docs, ship the thing, learn what went wrong.</p>
+  </div></section>
+
+  <section class="psec" id="terminal"><h2>Terminal</h2><div>
+    <p class="tnote">A riced Arch Linux shell. Try the buttons, or type <kbd>help</kbd>. <kbd>rice</kbd> changes the theme, <kbd>Tab</kbd> completes.</p>
+    <div class="chips" id="chips">
+      <button class="chip" type="button" data-cmd="help">help</button>
+      <button class="chip" type="button" data-cmd="neofetch">neofetch</button>
+      <button class="chip" type="button" data-cmd="projects">projects</button>
+      <button class="chip" type="button" data-cmd="rice">rice</button>
+      <button class="chip" type="button" data-cmd="cmatrix">cmatrix</button>
+      <button class="chip" type="button" data-cmd="sl">sl</button>
+      <button class="chip" type="button" data-cmd="snake">snake</button>
+      <button class="chip" type="button" data-cmd="htop">htop</button>
+    </div>
+    <div class="desk" id="desk">
+    <div class="pbar">
+      <div class="pill"><span class="pb-logo" title="Arch Linux" aria-hidden="true">A</span><span class="pb-ws" id="pbWs"></span></div>
+      <div class="pill pb-title"><span id="tTitle">guest@archlinux: ~</span><span class="d" id="depthLbl">bash</span></div>
+      <div class="pill pb-r">
+        <button type="button" class="pb-m pb-song c-song" id="pbSong" aria-label="Play or pause the song"></button>
+        <span class="pb-m pb-cpu c-cpu" id="pbCpu"></span><span class="pb-m pb-mem c-mem" id="pbMem"></span><span class="pb-m c-clk" id="pbClk"></span>
+        <button type="button" class="pb-m pb-full" id="tFull" title="Fullscreen" aria-label="Toggle fullscreen">⤢</button>
+      </div>
+    </div>
+    <div class="tiles">
+    <div class="term">
+      <div class="term-body" id="tbody" role="log" aria-label="Interactive terminal"></div>
+    </div>
+    <div class="side" aria-label="Desktop widgets">
+      <section class="tile" id="tAbout"><h4>~/me <i>fastfetch</i></h4><div class="tl-b"><pre class="logo" aria-hidden="true"></pre><div class="tl-t" id="tlInfo"></div></div></section>
+      <section class="tile" id="tCava"><h4>cava <i id="cavaSt">idle</i></h4><canvas id="cava" aria-hidden="true"></canvas></section>
+      <section class="tile" id="tClock"><h4>clock <i>Asia/Kathmandu</i></h4><div class="tl-b"><div class="bigtime" id="bigTime"></div><div class="d" id="bigDate"></div><pre class="mini-cal" id="miniCal"></pre></div></section>
+    </div>
+    </div>
+    </div>
+  </div></section>
+
+  <!-- EDIT: your skills. A dt (group) followed by a dd (comma separated). -->
+  <section class="psec" id="skills"><h2>Skills</h2><dl class="skills" id="skillList">
+    <dt>Languages</dt><dd>Python, JavaScript, C</dd>
+    <dt>Web</dt><dd>HTML, CSS, Node.js</dd>
+    <dt>Tools</dt><dd>Git, Linux, VS Code</dd>
+    <dt>Learning</dt><dd>Data structures, Algorithms, Electronics</dd>
+  </dl></section>
+
+  <!-- EDIT: your email and links. -->
+  <section class="psec" id="contact"><h2>Contact</h2><div>
+    <p class="mail" id="mail"><a href="mailto:aascharyapaudel95@gmail.com">aascharyapaudel95@gmail.com</a></p>
+    <ul class="links" id="linkList">
+      <li><span>GitHub</span><a href="https://github.com/Aascharyx" target="_blank" rel="noopener">github.com/Aascharyx</a></li>
+      <li><span>Location</span>Pokhara, Nepal</li>
+    </ul>
+    <button class="ctl" id="copyMail" type="button">Copy email</button>
+  </div></section>
+</div>
+
+<div class="song" id="bar">
+  <span class="disc" id="disc" aria-hidden="true"></span>
+  <div class="bar-t"><b id="plT"></b><small id="plS"></small></div>
+  <button class="ctl" id="plBtn" type="button">Play</button>
+  <audio id="aud" preload="metadata" loop></audio>
+</div>
+
+<script>
+/* ===== YOUR SONG: put the file in assets/ and set the title and artist here. =====
+   Your about text, projects, skills and contact live in the page HTML (look for id="aboutBody"). */
+const SONG = { title: "Suzume", artist: "Suzume no Tojimari AMV", src: "assets/song.mp3" };
+/* ===== end of editable content ===== */
+
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const calm = matchMedia("(prefers-reduced-motion:reduce)").matches;
+const fine = matchMedia("(pointer:fine)").matches;
+const root = document.documentElement;
+
+/* ----- content: read from the page HTML, so the terminal and the plain view never disagree ----- */
+const txt = el => (el ? el.textContent.trim().replace(/\s+/g, " ") : "");
+const csv = el => txt(el).split(",").map(x => x.trim()).filter(Boolean);
+const all = q => [...document.querySelectorAll(q)];
+const DATA = {
+  roles: ($("#top").dataset.roles || "").split(",").map(x => x.trim()).filter(Boolean),
+  about: all("#aboutBody p").map(txt),
+  projects: all("#workList li").map(li => ({ slug: li.dataset.slug, title: txt(li.querySelector("h3")), desc: txt(li.querySelector("p")), stack: csv(li.querySelector(".stk")), year: txt(li.querySelector(".yr")) })),
+  skills: Object.fromEntries(all("#skillList dt").map(dt => [txt(dt), csv(dt.nextElementSibling)])),
+  contact: { email: txt($("#mail")), links: all("#linkList li").map(li => { const k = txt(li.querySelector("span")), a = li.querySelector("a"); return [k, txt(li).slice(k.length).trim(), a ? a.href : ""]; }) }
+};
+const lk = (label, href) => `<a href="${esc(href)}" target="_blank" rel="noopener">${esc(label)}</a>`;
+$("#copyMail").addEventListener("click", async e => {
+  const b = e.currentTarget;
+  try { await navigator.clipboard.writeText(DATA.contact.email); b.textContent = "Copied"; }
+  catch (_) { const r = document.createRange(); r.selectNodeContents($("#mail")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; }
+  setTimeout(() => (b.textContent = "Copy email"), 1800);
+});
+
+/* ----- clock, theme, view ----- */
+function theme() { return root.dataset.theme || (matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light"); }
+function setTheme(t) { root.dataset.theme = t; $("#thm").textContent = t === "dark" ? "Day" : "Night"; try { localStorage.setItem("ap-theme", t); } catch (_) {} }
+try { const s = localStorage.getItem("ap-theme"); if (s === "dark" || s === "light") root.dataset.theme = s; } catch (_) {}
+$("#thm").textContent = theme() === "dark" ? "Day" : "Night";
+$("#thm").addEventListener("click", () => setTheme(theme() === "dark" ? "light" : "dark"));
+
+/* ----- your song: audio file lives next to the page in assets/ ----- */
+const aud = $("#aud");
+let missing = false;
+const Player = (() => {
+  const btn = $("#plBtn"), disc = $("#disc"), bar = $("#bar");
+  function ui() {
+    $("#plT").textContent = SONG.title;
+    $("#plS").textContent = missing ? "add assets/song.mp3 to play your song" : SONG.artist;
+    btn.disabled = missing;
+  }
+  aud.src = SONG.src; ui();
+  aud.addEventListener("error", () => { missing = true; ui(); });
+  aud.addEventListener("play", () => { btn.textContent = "Pause"; disc.classList.add("spin"); bar.classList.add("playing"); });
+  aud.addEventListener("pause", () => { btn.textContent = "Play"; disc.classList.remove("spin"); bar.classList.remove("playing"); });
+  let ac = null, an = null, fd = null, lvl = 0;
+  function listen() {
+    if (an || location.protocol === "file:") return;
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext; ac = new AC();
+      const src = ac.createMediaElementSource(aud); an = ac.createAnalyser(); an.fftSize = 256; an.smoothingTimeConstant = 0.8;
+      src.connect(an); an.connect(ac.destination); fd = new Uint8Array(an.frequencyBinCount);
+    } catch (_) { an = null; }
+    if (ac) ac.resume().catch(() => {});
+  }
+  const api = {
+    spectrum() { if (!an || aud.paused) return null; an.getByteFrequencyData(fd); return fd; },
+    level() { if (!an || aud.paused) { lvl *= 0.9; return lvl; } an.getByteFrequencyData(fd); let x = 0; for (let i = 1; i < 8; i++) x += fd[i]; lvl = lvl * 0.7 + (x / 7 / 255) * 0.3; return lvl; },
+    play() { if (missing) return false; listen(); if (ac && ac.state === "suspended") ac.resume().catch(() => {}); aud.play().catch(() => { missing = true; ui(); }); return true; },
+    pause() { aud.pause(); },
+    toggle() { aud.paused ? api.play() : api.pause(); }
+  };
+  btn.addEventListener("click", () => api.toggle());
+  return api;
+})();
+
+/* ===== Arch Linux shell: an in-memory filesystem, pipes, redirects and a few full-screen programs ===== */
+const HOSTN = "archlinux", USER = "guest", HOME = "/home/guest", KERNEL = "6.17.7-arch1-1", BASH_V = "5.3.3";
+const T_BOOT = Date.now(), T0 = new Date(Date.now() - 2 * 86400000);
+const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const MONF = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const pad2 = n => String(n).padStart(2, "0");
+const np = (d = new Date()) => {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Kathmandu", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric", hour12: false, weekday: "short" }).formatToParts(d).map(x => [x.type, x.value]));
+  return { Y: +p.year, M: +p.month, D: +p.day, h: +p.hour % 24, m: +p.minute, s: +p.second, wd: DAYS.indexOf(p.weekday) };
+};
+const lsDate = d => { const x = np(d); return `${MON[x.M - 1]} ${String(x.D).padStart(2)} ${pad2(x.h)}:${pad2(x.m)}`; };
+const dateStr = (d = new Date()) => { const x = np(d); return `${DAYS[x.wd]} ${MON[x.M - 1]} ${String(x.D).padStart(2)} ${pad2(x.h)}:${pad2(x.m)}:${pad2(x.s)} +0545 ${x.Y}`; };
+const bytes = s => new TextEncoder().encode(s).length;
+const html2text = h => { const d = document.createElement("div"); d.innerHTML = h; return d.textContent; };
+const cmp = (a, b) => a.localeCompare(b, "en", { ignorePunctuation: true });
+const ABORT = Symbol("abort");
+const nap = (ms, sig) => new Promise((res, rej) => { if (sig && sig.aborted) return rej(ABORT); const id = setTimeout(res, ms); if (sig) sig.addEventListener("abort", () => { clearTimeout(id); rej(ABORT); }, { once: true }); });
+const grouped = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+/* ----- environment ----- */
+const ENV = { USER, LOGNAME: USER, HOME, SHELL: "/bin/bash", PWD: HOME, OLDPWD: "", LANG: "en_US.UTF-8", TERM: "xterm-256color", COLORTERM: "truecolor", EDITOR: "vim", PAGER: "less", HOSTNAME: HOSTN,
+  PATH: "/usr/local/sbin:/usr/local/bin:/usr/bin", SHLVL: "1", XDG_SESSION_TYPE: "tty", XDG_RUNTIME_DIR: "/run/user/1000", "?": "0" };
+const EXPORTED = new Set(["USER", "LOGNAME", "HOME", "SHELL", "PWD", "OLDPWD", "LANG", "TERM", "COLORTERM", "EDITOR", "PAGER", "PATH", "SHLVL", "XDG_SESSION_TYPE", "XDG_RUNTIME_DIR"]);
+const ALIAS = { grep: "grep --color=auto", la: "ls -A", ll: "ls -lah", ls: "ls --color=auto" };
+
+/* ----- filesystem ----- */
+const mkF = (c, o = {}) => ({ t: "f", c, own: o.own || "root", m: o.m ?? 0o644, mt: o.mt || T0, size: o.size, bin: o.bin });
+const mkD = (ch = {}, o = {}) => ({ t: "d", ch, own: o.own || "root", m: o.m ?? 0o755, mt: o.mt || T0 });
+const mkL = to => ({ t: "l", to, own: "root", m: 0o777, mt: T0 });
+const U = { own: USER };
+const BASHRC = `#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias ll='ls -lah'
+PS1='[\\u@\\h \\W]\\$ '
+`;
+const OSREL = `NAME="Arch Linux"
+PRETTY_NAME="Arch Linux"
+ID=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://archlinux.org/"
+DOCUMENTATION_URL="https://wiki.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
+PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+LOGO=archlinux-logo
+`;
+const PACMANCONF = `#
+# /etc/pacman.conf
+#
+[options]
+HoldPkg     = pacman glibc
+Architecture = auto
+Color
+ILoveCandy
+CheckSpace
+ParallelDownloads = 5
+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+`;
+
+/* ----- rice: palettes, prompt styles and desktop look ----- */
+const PAL = {
+  catppuccin: { n: "Catppuccin Mocha", bg: "#1e1e2e", bar: "#181825", fg: "#cdd6f4", dim: "#7f849c", line: "#313244", red: "#f38ba8", green: "#a6e3a1", yellow: "#f9e2af", blue: "#89b4fa", magenta: "#cba6f7", cyan: "#94e2d5", acc: "#cba6f7", wall: ["#11111b", "#2a2740", "#cba6f7", "#89b4fa"] },
+  tokyo: { n: "Tokyo Night", bg: "#1a1b26", bar: "#16161e", fg: "#c0caf5", dim: "#565f89", line: "#292e42", red: "#f7768e", green: "#9ece6a", yellow: "#e0af68", blue: "#7aa2f7", magenta: "#bb9af7", cyan: "#7dcfff", acc: "#7aa2f7", wall: ["#0f1019", "#24283b", "#7aa2f7", "#bb9af7"] },
+  gruvbox: { n: "Gruvbox Dark", bg: "#282828", bar: "#1d2021", fg: "#ebdbb2", dim: "#928374", line: "#3c3836", red: "#fb4934", green: "#b8bb26", yellow: "#fabd2f", blue: "#83a598", magenta: "#d3869b", cyan: "#8ec07c", acc: "#fabd2f", wall: ["#1d2021", "#32302f", "#d65d0e", "#fabd2f"] },
+  nord: { n: "Nord", bg: "#2e3440", bar: "#242933", fg: "#d8dee9", dim: "#7b88a1", line: "#3b4252", red: "#bf616a", green: "#a3be8c", yellow: "#ebcb8b", blue: "#81a1c1", magenta: "#b48ead", cyan: "#88c0d0", acc: "#88c0d0", wall: ["#1c2028", "#3b4252", "#88c0d0", "#81a1c1"] },
+  dracula: { n: "Dracula", bg: "#282a36", bar: "#21222c", fg: "#f8f8f2", dim: "#6272a4", line: "#44475a", red: "#ff5555", green: "#50fa7b", yellow: "#f1fa8c", blue: "#bd93f9", magenta: "#ff79c6", cyan: "#8be9fd", acc: "#ff79c6", wall: ["#191a21", "#343746", "#ff79c6", "#bd93f9"] },
+  rosepine: { n: "Rose Pine", bg: "#191724", bar: "#14121f", fg: "#e0def4", dim: "#6e6a86", line: "#26233a", red: "#eb6f92", green: "#9ccfd8", yellow: "#f6c177", blue: "#31748f", magenta: "#c4a7e7", cyan: "#9ccfd8", acc: "#ebbcba", wall: ["#100e18", "#26233a", "#ebbcba", "#c4a7e7"] },
+  sumi: { n: "Sumi (this site)", bg: "#14181c", bar: "#0e1215", fg: "#d9dfd7", dim: "#76828c", line: "#252f38", red: "#e5857a", green: "#9fc48f", yellow: "#e0c27a", blue: "#7fa8cc", magenta: "#c49bb8", cyan: "#86c1b9", acc: "#d9483b", wall: ["#0b0e11", "#1c2630", "#d9483b", "#7fa8cc"] },
+  arch: { n: "Arch Blue", bg: "#0c0f12", bar: "#080a0c", fg: "#d3dae3", dim: "#76828c", line: "#1d242b", red: "#e06c75", green: "#98c379", yellow: "#e5c07b", blue: "#61afef", magenta: "#c678dd", cyan: "#56b6c2", acc: "#1793d1", wall: ["#06080a", "#14202b", "#1793d1", "#56b6c2"] }
+};
+const WS = ["catppuccin", "tokyo", "gruvbox", "nord", "dracula"];
+const RICE0 = { pal: "catppuccin", prompt: "powerline", op: 80, blur: 10, fs: 13.5, gap: 12 };
+let RICE = { ...RICE0 };
+try { Object.assign(RICE, JSON.parse(localStorage.getItem("ap-rice") || "{}")); } catch (_) {}
+if (!PAL[RICE.pal]) RICE.pal = RICE0.pal;
+const hx = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+const mixHex = (a, b, t) => { const x = hx(a), y = hx(b); return "#" + x.map((v, i) => Math.round(v + (y[i] - v) * t).toString(16).padStart(2, "0")).join(""); };
+function wallpaper(p) {
+  const [c0, c1, c2, c3] = p.wall, W = 1600, H = 900; let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const ridge = (base, amp, step, col, op) => { let d = `M0 ${H}L0 ${base}`; let x = 0, up = false; while (x < W) { x += step * (0.6 + rnd() * 0.9); const y = base - (up ? amp * (0.5 + rnd() * 0.7) : amp * rnd() * 0.25); d += `L${Math.min(x, W)} ${y.toFixed(0)}`; up = !up; } return `<path d="${d}L${W} ${H}Z" fill="${col}" opacity="${op}"/>`; };
+  let stars = ""; for (let i = 0; i < 70; i++) stars += `<circle cx="${(rnd() * W).toFixed(0)}" cy="${(rnd() * H * 0.5).toFixed(0)}" r="${(0.6 + rnd() * 1.1).toFixed(1)}" fill="#fff" opacity="${(0.15 + rnd() * 0.45).toFixed(2)}"/>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c0}"/><stop offset=".55" stop-color="${mixHex(c1, c2, 0.28)}"/><stop offset="1" stop-color="${mixHex(c1, c2, 0.5)}"/></linearGradient><radialGradient id="g"><stop offset="0" stop-color="${c2}" stop-opacity=".55"/><stop offset="1" stop-color="${c2}" stop-opacity="0"/></radialGradient></defs><rect width="${W}" height="${H}" fill="url(#s)"/>${stars}<circle cx="1180" cy="520" r="260" fill="url(#g)"/><circle cx="1180" cy="520" r="74" fill="${mixHex(c2, "#ffffff", 0.35)}"/>${ridge(610, 230, 90, mixHex(c1, c3, 0.35), 0.75)}${ridge(700, 190, 70, mixHex(c1, c0, 0.35), 0.95)}${ridge(790, 150, 55, mixHex(c0, "#000000", 0.35), 1)}<rect y="840" width="${W}" height="60" fill="${mixHex(c0, "#000000", 0.55)}"/></svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+}
+function applyRice() {
+  const d = $("#desk"), p = PAL[RICE.pal], st = d.style, set = (k, v) => st.setProperty(k, v);
+  set("--term-bg", p.bg); set("--term-bar", p.bar); set("--term-fg", p.fg); set("--term-dim", p.dim); set("--term-line", p.line); set("--term-ac", p.blue); set("--term-ok", p.green); set("--term-err", p.red);
+  ["red", "green", "yellow", "blue", "magenta", "cyan"].forEach(k => set("--" + k, p[k])); set("--acc", p.acc); set("--bold", p.fg);
+  set("--op", RICE.op + "%"); set("--blur", RICE.blur + "px"); set("--gap", RICE.gap + "px"); set("--fs", RICE.fs + "px");
+  set("--wall", wallpaper(p));
+  try { localStorage.setItem("ap-rice", JSON.stringify(RICE)); } catch (_) {}
+  const ws = $("#pbWs"); if (ws) [...ws.children].forEach((b, i) => b.classList.toggle("on", WS[i] === RICE.pal));
+  if (current) current.updatePrompt();
+}
+function setupBar() {
+  const ws = $("#pbWs"); WS.forEach((k, i) => { const b = document.createElement("button"); b.type = "button"; b.textContent = i + 1; b.title = PAL[k].n; b.addEventListener("click", () => { RICE.pal = k; applyRice(); }); ws.appendChild(b); });
+  const song = $("#pbSong"), cpu = $("#pbCpu"), mem = $("#pbMem"), clk = $("#pbClk");
+  song.addEventListener("click", () => Player.toggle());
+  const tick = () => { const x = np(); song.innerHTML = `<i>♪</i>${esc(missing ? "no song" : SONG.title)}${!missing && !aud.paused ? " ▸" : ""}`; cpu.innerHTML = `<i>cpu</i>${(3 + Math.random() * 12).toFixed(0)}%`; mem.innerHTML = `<i>mem</i>1.9G`; clk.innerHTML = `<i>${DAYS[x.wd]}</i>${pad2(x.h)}:${pad2(x.m)}`; };
+  tick(); setInterval(tick, 2000); aud.addEventListener("play", tick); aud.addEventListener("pause", tick);
+}
+
+/* ----- desktop widgets beside the terminal ----- */
+function setupTiles() {
+  const logo = ARCH.join("\n"), info = $("#tlInfo"), cv = $("#cava"), g = cv.getContext("2d"), st = $("#cavaSt");
+  $(".logo").textContent = logo;
+  info.innerHTML = `<b>Aascharya Paudel</b>\n${esc(DATA.roles.join(" · "))}\n${esc((DATA.contact.links.find(l => /location/i.test(l[0])) || [0, "Nepal"])[1])}\n<span class="d">${esc(DATA.contact.links.find(l => /github/i.test(l[0]))?.[1] || "")}</span>`;
+  const N = 28, hv = new Float32Array(N); let W = 0, H = 0, vis = true;
+  new IntersectionObserver(es => { vis = es[0].isIntersecting; }, { threshold: 0 }).observe($("#desk"));
+  const fit = () => { const dpr = Math.min(devicePixelRatio || 1, 2), r = cv.getBoundingClientRect(); W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; g.setTransform(dpr, 0, 0, dpr, 0, 0); };
+  new ResizeObserver(fit).observe(cv); fit();
+  const col = k => getComputedStyle($("#desk")).getPropertyValue(k).trim();
+  function draw(t) {
+    if (vis && !document.hidden && W > 8) {
+      g.clearRect(0, 0, W, H); const sp = Player.spectrum(), play = !aud.paused && !missing, bw = W / N;
+      const a = col("--acc"), b = col("--cyan"), grd = g.createLinearGradient(0, H, 0, 0); grd.addColorStop(0, b); grd.addColorStop(1, a); g.fillStyle = grd;
+      for (let i = 0; i < N; i++) {
+        let v;
+        if (sp) v = sp[Math.floor(2 + i * 0.9)] / 255 * (0.9 + i / N * 0.8); else if (play) v = 0.35 + 0.3 * Math.sin(t / 260 + i * 0.7) * Math.sin(t / 530 + i * 0.31) + 0.12 * Math.sin(t / 90 + i * 2.1); else v = 0.04;
+        hv[i] += (Math.max(0.03, Math.min(1, v)) - hv[i]) * 0.3; const h = Math.max(2, hv[i] * (H - 6));
+        g.globalAlpha = 0.9; g.fillRect(i * bw + 1.5, H - h - 2, Math.max(2, bw - 3), h);
+      }
+      g.globalAlpha = 1; st.textContent = missing ? "no song" : play ? "playing" : "paused";
+    }
+    if (!calm) requestAnimationFrame(draw);
+  }
+  draw(0); if (calm) setInterval(() => draw(performance.now()), 600);
+  const bt = $("#bigTime"), bd = $("#bigDate"), mc = $("#miniCal");
+  const clock = () => {
+    const x = np(), first = new Date(Date.UTC(x.Y, x.M - 1, 1)).getUTCDay(), dim = new Date(Date.UTC(x.Y, x.M, 0)).getUTCDate();
+    bt.textContent = `${pad2(x.h)}:${pad2(x.m)}`; bd.textContent = `${DAYS[x.wd]}, ${x.D} ${MONF[x.M - 1]} ${x.Y}`;
+    let o = "Su Mo Tu We Th Fr Sa\n" + "   ".repeat(first); for (let d = 1; d <= dim; d++) { o += (d === x.D ? `<span class="rv">${String(d).padStart(2)}</span>` : String(d).padStart(2)) + ((first + d) % 7 === 0 ? "\n" : " "); } mc.innerHTML = o;
+  };
+  clock(); setInterval(clock, 15000);
+}
+
+let ROOT = null;
+function buildFS() {
+  const proj = {};
+  DATA.projects.forEach(p => { proj[p.slug + ".md"] = mkF(["# " + p.title, "", p.desc, "", "stack: " + p.stack.join(", "), "year:  " + p.year, ""].join("\n"), U); });
+  const home = mkD({
+    "about.txt": mkF(DATA.about.join("\n\n") + "\n", U),
+    "skills.txt": mkF(Object.entries(DATA.skills).map(([k, v]) => k.padEnd(10) + v.join(", ")).join("\n") + "\n", U),
+    "contact.txt": mkF([DATA.contact.email].concat(DATA.contact.links.map(([k, v]) => k + ": " + v)).join("\n") + "\n", U),
+    "README.md": mkF("# " + "Aascharya Paudel" + "\n\nWelcome. Try: neofetch, cat about.txt, cd projects, htop, vim, cmatrix, sl, snake.\nType help for the full list.\n", U),
+    Documents: mkD({}, U), Downloads: mkD({}, U), Music: mkD({ "song.mp3": mkF("", { own: USER, size: 3643074, bin: true }) }, U), projects: mkD(proj, U),
+    ".bashrc": mkF(BASHRC, U), ".bash_profile": mkF("#\n# ~/.bash_profile\n#\n\n[[ -f ~/.bashrc ]] && . ~/.bashrc\n", U),
+    ".secret": mkF("Effort does not betray you.\n\nAlso: try sudo.\n", U), ".config": mkD({}, U)
+  }, U);
+  const bins = {}; Object.keys(CM).sort().forEach(k => { bins[k] = mkF("", { m: 0o755, bin: true, size: 38000 + (k.length * 977) % 90000 }); });
+  ROOT = mkD({
+    bin: mkL("usr/bin"), boot: mkD({}), dev: mkD({ null: mkF(""), tty: mkF("") }),
+    etc: mkD({ hostname: mkF(HOSTN + "\n"), "os-release": mkF(OSREL), issue: mkF("Arch Linux \\r (\\l)\n\n"), "pacman.conf": mkF(PACMANCONF), passwd: mkF(`root:x:0:0::/root:/bin/bash\nnobody:x:65534:65534:Kernel Overflow User:/:/usr/bin/nologin\n${USER}:x:1000:1000:Aascharya Paudel:${HOME}:/bin/bash\n`), shells: mkF("/bin/bash\n/bin/sh\n"), "locale.conf": mkF("LANG=en_US.UTF-8\n"), timezone: mkF("Asia/Kathmandu\n") }),
+    home: mkD({ [USER]: home }), lib: mkL("usr/lib"), lib64: mkL("usr/lib"), mnt: mkD({}), opt: mkD({}),
+    proc: mkD({ version: mkF(`Linux version ${KERNEL} (linux@archlinux) (gcc (GCC) 15.2.1, GNU ld (GNU Binutils) 2.45.0) #1 SMP PREEMPT_DYNAMIC\n`), cpuinfo: mkF(`processor\t: 0\nmodel name\t: your browser reports ${navigator.hardwareConcurrency || 4} threads\n`) }),
+    root: mkD({}, { m: 0o750 }), run: mkD({}), sbin: mkL("usr/bin"), srv: mkD({}), sys: mkD({}), tmp: mkD({}, { m: 0o1777 }),
+    usr: mkD({ bin: mkD(bins), lib: mkD({}), local: mkD({}), share: mkD({}) }), var: mkD({ cache: mkD({}), lib: mkD({}), log: mkD({}) })
+  });
+}
+function normSegs(arr) { const o = []; for (const s of arr) { if (!s || s === ".") continue; if (s === "..") o.pop(); else o.push(s); } return o; }
+function segsOf(p, cwd = HOME) { if (p === "~" || p.startsWith("~/")) p = HOME + p.slice(1); return normSegs((p.startsWith("/") ? p : cwd + "/" + p).split("/")); }
+function walk(segs, follow = true, hops = 0) {
+  let n = ROOT; const cur = [];
+  for (let i = 0; i < segs.length; i++) {
+    if (n.t !== "d") return null;
+    const nx = n.ch[segs[i]]; if (!nx) return null;
+    cur.push(segs[i]);
+    if (nx.t === "l" && (follow || i < segs.length - 1)) {
+      if (hops > 8) return null;
+      const t = nx.to.startsWith("/") ? nx.to.split("/") : cur.slice(0, -1).concat(nx.to.split("/"));
+      return walk(normSegs(t.concat(segs.slice(i + 1))), follow, hops + 1);
+    }
+    n = nx;
+  }
+  return n;
+}
+const getNode = (p, cwd, follow = true) => walk(segsOf(p, cwd), follow);
+const canWrite = segs => (segs[0] === "home" && segs[1] === USER) || segs[0] === "tmp";
+const canRead = n => n.own === USER || (n.m & 4);
+const pretty = p => p === HOME ? "~" : p.startsWith(HOME + "/") ? "~" + p.slice(HOME.length) : p;
+function writeFile(p, content, append, cwd) {
+  const segs = segsOf(p, cwd); if (segs.join("/") === "dev/null") return null;
+  const name = segs[segs.length - 1], par = walk(segs.slice(0, -1));
+  if (!name || !par || par.t !== "d") return "No such file or directory";
+  if (!canWrite(segs)) return "Permission denied";
+  const ex = par.ch[name]; if (ex && ex.t === "d") return "Is a directory";
+  if (ex) { ex.c = append ? ex.c + content : content; ex.mt = new Date(); } else par.ch[name] = mkF(content, { own: USER, mt: new Date() });
+  return null;
+}
+function glob(pat, cwd) {
+  const i = pat.lastIndexOf("/"), dir = i < 0 ? "." : pat.slice(0, i) || "/", base = pat.slice(i + 1), n = getNode(dir, cwd);
+  if (!n || n.t !== "d") return [];
+  const re = new RegExp("^" + base.replace(/[.+^${}()|[\]\\]/g, "\\$&").replace(/\*/g, ".*").replace(/\?/g, ".") + "$");
+  return Object.keys(n.ch).filter(k => re.test(k) && (base.startsWith(".") || !k.startsWith("."))).sort(cmp).map(k => (i < 0 ? "" : pat.slice(0, i + 1)) + k);
+}
+const sizeOf = n => n.t === "d" ? 4096 : n.t === "l" ? n.to.length : (n.size ?? bytes(n.c));
+const human = n => { if (n < 1024) return String(n); const u = ["K", "M", "G"]; let i = -1; do { n /= 1024; i++; } while (n >= 1024 && i < 2); return (n < 10 ? n.toFixed(1) : Math.round(n)) + u[i]; };
+const modeStr = n => { let s = n.t === "d" ? "d" : n.t === "l" ? "l" : "-"; for (let i = 2; i >= 0; i--) { const b = (n.m >> (i * 3)) & 7; s += (b & 4 ? "r" : "-") + (b & 2 ? "w" : "-") + (b & 1 ? "x" : "-"); } if (n.m & 0o1000) s = s.slice(0, 9) + (s[9] === "x" ? "t" : "T"); return s; };
+function parseFlags(a) {
+  const f = new Set(), long = new Set(), rest = []; let done = false;
+  for (const x of a) { if (done || x === "-" || !x.startsWith("-")) rest.push(x); else if (x === "--") done = true; else if (x.startsWith("--")) long.add(x.slice(2).split("=")[0]); else [...x.slice(1)].forEach(ch => f.add(ch)); }
+  return { f, long, rest };
+}
+const textMeasure = () => { const s = document.createElement("span"); s.style.cssText = "position:absolute;visibility:hidden;white-space:pre"; s.textContent = "M".repeat(20); body.appendChild(s); const w = s.getBoundingClientRect().width / 20; s.remove(); return { w: w || 8.1, lh: parseFloat(getComputedStyle(body).lineHeight) || 21.6 }; };
+const colsNow = () => Math.max(24, Math.floor((body.clientWidth - 32) / textMeasure().w));
+
+/* ----- packages (pretend) ----- */
+const PKGS = [
+  ["base", "3-2", "core", "Minimal package set to define a basic Arch Linux installation"], ["bash", "5.3.3-1", "core", "The GNU Bourne Again shell"], ["coreutils", "9.8-1", "core", "The basic file, shell and text manipulation utilities"],
+  ["gcc", "15.2.1+r22+gc4e96a918d1c-1", "core", "The GNU Compiler Collection - C and C++ frontends"], ["git", "2.51.0-1", "extra", "the fast distributed version control system"], ["htop", "3.4.1-1", "extra", "Interactive process viewer"],
+  ["linux", "6.17.7.arch1-1", "core", "The Linux kernel and modules"], ["mpv", "1:0.40.0-2", "extra", "a free, open source, and cross-platform media player"], ["neovim", "0.11.4-1", "extra", "Fork of Vim aiming to improve user experience, plugins, and GUIs"],
+  ["nodejs", "24.9.0-1", "extra", "Evented I/O for V8 javascript"], ["pacman", "7.1.0-1", "core", "A library-based package manager with dependency support"], ["python", "3.13.7-1", "core", "The Python programming language"],
+  ["sl", "5.02-4", "extra", "Steam Locomotive runs across your terminal when you type sl"], ["cmatrix", "2.0-3", "extra", "A curses-based scrolling Matrix-like screen"], ["cowsay", "3.8.4-1", "extra", "A configurable talking cow"],
+  ["vim", "9.1.1800-1", "extra", "Vi Improved, a highly configurable, improved version of the vi text editor"], ["sudo", "1.9.17.p2-1", "core", "Give certain users the ability to run some commands as root"], ["systemd", "258.1-1", "core", "system and service manager"]
+];
+
+/* ----- small helpers for output ----- */
+const lsCls = n => n.t === "d" ? "ls-d" : n.t === "l" ? "ls-l" : (n.m & 0o111 ? "ls-x" : "");
+function lines(c) { return (c.stdin ?? "").replace(/\n$/, "").split("\n"); }
+function wrapText(s, w) { const out = []; let cur = ""; for (const word of s.split(/\s+/)) { if ((cur + " " + word).trim().length > w && cur) { out.push(cur); cur = word; } else cur = (cur + " " + word).trim(); } if (cur) out.push(cur); return out.length ? out : [""]; }
+const FORTUNES = [
+  "Make it work, make it right, make it fast. -- Kent Beck", "Measure twice, cut once.", "A journey of a thousand miles begins with a single step. -- Lao Tzu",
+  "Slow is smooth, smooth is fast.", "Fall down seven times, get up eight. -- Japanese proverb", "Done is better than perfect.",
+  "There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton", "Talk is cheap. Show me the code. -- Linus Torvalds",
+  "Premature optimization is the root of all evil. -- Donald Knuth", "I use Arch, btw."
+];
+function cowsay(text) {
+  const ls = wrapText(text, 40), w = Math.max(...ls.map(l => l.length)); let o = " " + "_".repeat(w + 2) + "\n";
+  ls.forEach((l, i) => { const [a, b] = ls.length === 1 ? ["<", ">"] : i === 0 ? ["/", "\\"] : i === ls.length - 1 ? ["\\", "/"] : ["|", "|"]; o += a + " " + l.padEnd(w) + " " + b + "\n"; });
+  return o + " " + "-".repeat(w + 2) + "\n        \\   ^__^\n         \\  (oo)\\_______\n            (__)\\       )\\/\\\n                ||----w |\n                ||     ||\n";
+}
+const ARCH = ["      /\\      ", "     /  \\     ", "    /\\   \\    ", "   /      \\   ", "  /   ,,   \\  ", " /   |  |  -\\ ", "/_-''    ''-_\\"];
+const MANS = {
+  ls: ["list directory contents", "ls [OPTION]... [FILE]...", "List information about the FILEs (the current directory by default).\n  -a  do not ignore entries starting with .\n  -l  use a long listing format\n  -h  with -l, print sizes like 1K 234M 2G\n  -1  list one file per line"],
+  cat: ["concatenate files and print on the standard output", "cat [OPTION]... [FILE]...", "Concatenate FILE(s) to standard output.\n  -n  number all output lines"],
+  grep: ["print lines that match patterns", "grep [OPTION]... PATTERNS [FILE]...", "Search for PATTERNS in each FILE.\n  -i  ignore case   -n  line numbers   -v  invert match\n  -c  count          -r  recurse        -l  names only"],
+  cd: ["change the working directory", "cd [DIR]", "Change the shell working directory. With no DIR, go to $HOME. cd - returns to the previous directory."],
+  pacman: ["package manager utility", "pacman <operation> [options] [targets]", "A package manager for Arch Linux.\n  -Q   query the local database   -Ss  search the sync databases\n  -Syu synchronize and upgrade (root only)"],
+  vim: ["Vi IMproved, a programmer's text editor", "vim [file]", "Modal editor. i to insert, Esc to leave insert mode, :w to write, :q to quit, :q! to quit without saving."],
+  htop: ["interactive process viewer", "htop", "Shows running processes. q or F10 quits."], cmatrix: ["show a scrolling Matrix like screen", "cmatrix [-C color]", "Colors: green red blue yellow cyan magenta white. q quits."],
+  sl: ["cure your bad habit of mistyping", "sl", "A steam locomotive runs across your terminal."], mpv: ["a media player", "mpv [file]", "Plays the song on this site. Ctrl+C stops."],
+  man: ["an interface to the system reference manuals", "man [command]", "Show the manual page for a command."], find: ["search for files in a directory hierarchy", "find [path] [-name pattern] [-type f|d]", "Walks the directory tree and prints matching paths."],
+  tree: ["list contents of directories in a tree-like format", "tree [-a] [directory]", "Recursively lists a directory."], echo: ["display a line of text", "echo [-ne] [STRING]...", "Echo the STRING(s) to standard output."],
+  head: ["output the first part of files", "head [-n N] [FILE]...", "Print the first 10 lines by default."], tail: ["output the last part of files", "tail [-n N] [FILE]...", "Print the last 10 lines by default."],
+  wc: ["print newline, word, and byte counts", "wc [-lwc] [FILE]...", "Count lines, words and bytes."], sort: ["sort lines of text files", "sort [-rnu] [FILE]", "Sort lines."], uniq: ["report or omit repeated lines", "uniq [-c]", "Filter adjacent matching lines."]
+};
+const WHATIS = { ...Object.fromEntries(Object.entries(MANS).map(([k, v]) => [k, v[0]])) };
+
+/* ----- commands ----- */
+const CM = {};
+CM.ls = c => {
+  const { f, rest } = parseFlags(c.a), all = f.has("a"), almost = f.has("A") || all, lflag = f.has("l"), hum = f.has("h"), one = f.has("1"), cls = f.has("F"), rev = f.has("r"), dflag = f.has("d");
+  const targets = rest.length ? rest : ["."]; let code = 0; const files = [], dirs = [];
+  for (const p of targets) { const n = getNode(p, c.t.cwd); if (!n) { c.err(`ls: cannot access '${p}': No such file or directory`); code = 2; continue; } if (n.t === "d" && !dflag) dirs.push([p, n]); else files.push([p, n]); }
+  const nm = it => { const k = lsCls(it.n); const label = esc(it.name) + (cls ? (it.n.t === "d" ? "/" : it.n.m & 0o111 && it.n.t === "f" ? "*" : "") : ""); return k && c.tty ? `<span class="${k}">${label}</span>` : label; };
+  const out = items => {
+    if (rev) items = items.slice().reverse();
+    if (!items.length) return;
+    if (lflag) {
+      const rows = items.map(it => ({ it, mode: modeStr(it.n), own: it.n.own, sz: hum ? human(sizeOf(it.n)) : String(sizeOf(it.n)), dt: lsDate(it.n.mt), nlink: it.n.t === "d" ? 2 : 1 }));
+      const wo = Math.max(...rows.map(r => r.own.length)), ws = Math.max(...rows.map(r => r.sz.length));
+      rows.forEach(r => c.w(`${r.mode} ${r.nlink} ${esc(r.own.padEnd(wo))} ${esc(r.own.padEnd(wo))} ${esc(r.sz.padStart(ws))} ${r.dt} ${nm(r.it)}${r.it.n.t === "l" ? " -&gt; " + esc(r.it.n.to) : ""}`));
+    } else if (!c.tty || one) items.forEach(it => c.w(nm(it)));
+    else {
+      const cols = colsNow(), mx = Math.max(...items.map(it => it.name.length)) + 2, nc = Math.max(1, Math.floor(cols / mx)), nr = Math.ceil(items.length / nc);
+      for (let r = 0; r < nr; r++) { let s = ""; for (let k = 0; k < nc; k++) { const it = items[k * nr + r]; if (!it) continue; s += nm(it) + " ".repeat(mx - it.name.length); } c.w(s.replace(/\s+$/, "")); }
+    }
+  };
+  if (files.length) out(files.map(([p, n]) => ({ name: p, n })));
+  dirs.forEach(([p, n], i) => {
+    if (!canRead(n)) { c.err(`ls: cannot open directory '${p}': Permission denied`); code = 2; return; }
+    if (targets.length > 1) { if (i || files.length) c.w(""); c.w(esc(p) + ":"); }
+    let ents = Object.keys(n.ch).filter(k => almost || !k.startsWith(".")).sort(cmp).map(k => ({ name: k, n: n.ch[k] }));
+    if (all) ents = [{ name: ".", n }, { name: "..", n }].concat(ents);
+    if (lflag) c.w(`total ${Math.ceil(ents.reduce((s, e) => s + Math.max(4, Math.ceil(sizeOf(e.n) / 1024)), 0) / 4) * 4}`);
+    out(ents);
+  });
+  return code;
+};
+CM.cd = c => {
+  let d = c.a[0] ?? "~", code = 0;
+  if (d === "-") { d = ENV.OLDPWD || c.t.cwd; c.w(esc(d)); }
+  const n = getNode(d, c.t.cwd);
+  if (!n) { c.err(`bash: cd: ${c.a[0]}: No such file or directory`); return 1; }
+  if (n.t !== "d") { c.err(`bash: cd: ${c.a[0]}: Not a directory`); return 1; }
+  if (!canRead(n)) { c.err(`bash: cd: ${c.a[0]}: Permission denied`); return 1; }
+  ENV.OLDPWD = c.t.cwd; c.t.cwd = "/" + segsOf(d, c.t.cwd).join("/"); ENV.PWD = c.t.cwd; return code;
+};
+CM.pwd = c => { c.w(esc(c.t.cwd)); };
+CM.cat = c => {
+  const { f, rest } = parseFlags(c.a); let code = 0, n = 0;
+  const emit = txt => { txt.replace(/\n$/, "").split("\n").forEach(l => c.w((f.has("n") ? String(++n).padStart(6) + "\t" : "") + esc(l))); };
+  if (!rest.length) { if (c.stdin != null) emit(c.stdin); return 0; }
+  for (const p of rest) {
+    const nd = getNode(p, c.t.cwd);
+    if (!nd) { c.err(`cat: ${p}: No such file or directory`); code = 1; } else if (nd.t === "d") { c.err(`cat: ${p}: Is a directory`); code = 1; }
+    else if (!canRead(nd)) { c.err(`cat: ${p}: Permission denied`); code = 1; }
+    else if (nd.bin) { c.w("ID3" + Array.from({ length: 60 }, () => String.fromCharCode(0x2580 + Math.floor(Math.random() * 100))).join("")); }
+    else if (nd.c) emit(nd.c);
+  }
+  return code;
+};
+CM.tac = c => { (c.stdin == null ? [] : lines(c)).reverse().forEach(l => c.w(esc(l))); };
+CM.rev = c => { lines(c).forEach(l => c.w(esc([...l].reverse().join("")))); };
+CM.nl = c => { lines(c).forEach((l, i) => c.w(String(i + 1).padStart(6) + "\t" + esc(l))); };
+function srcLines(c, rest) { if (rest.length) { const n = getNode(rest[0], c.t.cwd); if (!n || n.t !== "f") { c.err(`${c.name}: ${rest[0]}: No such file or directory`); return null; } return n.c.replace(/\n$/, "").split("\n"); } return c.stdin == null ? [] : lines(c); }
+CM.head = CM.tail = c => {
+  let n = 10, rest = [];
+  for (let i = 0; i < c.a.length; i++) { const x = c.a[i]; if (x === "-n") n = +c.a[++i]; else if (/^-\d+$/.test(x)) n = -x; else rest.push(x); }
+  const ls = srcLines(c, rest); if (!ls) return 1;
+  (c.name === "head" ? ls.slice(0, n) : ls.slice(-n)).forEach(l => c.w(esc(l)));
+};
+CM.wc = c => {
+  const { f, rest } = parseFlags(c.a), any = f.has("l") || f.has("w") || f.has("c"), txt = rest.length ? ((getNode(rest[0], c.t.cwd) || {}).c ?? null) : (c.stdin ?? "");
+  if (txt == null) { c.err(`wc: ${rest[0]}: No such file or directory`); return 1; }
+  const cols = []; if (!any || f.has("l")) cols.push((txt.match(/\n/g) || []).length); if (!any || f.has("w")) cols.push(txt.trim() ? txt.trim().split(/\s+/).length : 0); if (!any || f.has("c")) cols.push(bytes(txt));
+  c.w(cols.map(x => String(x).padStart(any && cols.length === 1 ? 0 : 7)).join(" ").trimEnd() + (rest[0] ? " " + esc(rest[0]) : ""));
+};
+CM.sort = c => { const { f, rest } = parseFlags(c.a), ls = srcLines(c, rest); if (!ls) return 1; let o = f.has("n") ? ls.sort((a, b) => parseFloat(a) - parseFloat(b)) : ls.sort(cmp); if (f.has("r")) o.reverse(); if (f.has("u")) o = o.filter((x, i) => !i || x !== o[i - 1]); o.forEach(l => c.w(esc(l))); };
+CM.uniq = c => { const { f } = parseFlags(c.a), ls = lines(c), out = []; ls.forEach(l => { const p = out[out.length - 1]; if (p && p[0] === l) p[1]++; else out.push([l, 1]); }); out.forEach(([l, n]) => c.w((f.has("c") ? String(n).padStart(7) + " " : "") + esc(l))); };
+CM.grep = c => {
+  const { f, rest } = parseFlags(c.a); if (!rest.length) { c.err("Usage: grep [OPTION]... PATTERNS [FILE]..."); return 2; }
+  let re; try { re = new RegExp(rest[0], f.has("i") ? "ig" : "g"); } catch (_) { re = new RegExp(rest[0].replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), f.has("i") ? "ig" : "g"); }
+  let targets = rest.slice(1); const recursive = f.has("r") || f.has("R");
+  const srcs = [];
+  const add = (label, n, path) => { if (n.t === "d") { if (recursive) Object.keys(n.ch).sort(cmp).forEach(k => add(label + (label.endsWith("/") ? "" : "/") + k, n.ch[k])); else c.err(`grep: ${label}: Is a directory`); } else if (n.t === "f" && !n.bin && canRead(n)) srcs.push([label, n.c]); };
+  if (!targets.length && recursive) targets = ["."];
+  if (targets.length) { for (const p of targets) { const n = getNode(p, c.t.cwd); if (!n) { c.err(`grep: ${p}: No such file or directory`); continue; } add(p === "." ? "." : p, n); } }
+  else srcs.push([null, c.stdin ?? ""]);
+  const multi = srcs.length > 1 || recursive; let found = 0;
+  for (const [label, txt] of srcs) {
+    let cnt = 0;
+    txt.replace(/\n$/, "").split("\n").forEach((l, i) => {
+      re.lastIndex = 0; const hit = re.test(l); re.lastIndex = 0;
+      if (hit === !!f.has("v")) return; cnt++; found++;
+      if (f.has("c") || f.has("l")) return;
+      let h = esc(l); if (c.tty && !f.has("v")) h = l.replace(re, m => "\u0001" + m + "\u0002").split(/(\u0001|\u0002)/).reduce((s, part) => part === "\u0001" ? s + "<span class=\"gm\">" : part === "\u0002" ? s + "</span>" : s + esc(part), "");
+      c.w((multi && label ? `<span class="gf">${esc(label)}</span><span class="gs">:</span>` : "") + (f.has("n") ? `<span class="gn">${i + 1}</span><span class="gs">:</span>` : "") + h);
+    });
+    if (f.has("c")) c.w((multi && label ? esc(label) + ":" : "") + cnt); else if (f.has("l") && cnt) c.w(esc(label || "(standard input)"));
+  }
+  return found ? 0 : 1;
+};
+CM.egrep = CM.grep;
+CM.find = c => {
+  const a = c.a; const starts = []; let i = 0; while (i < a.length && !a[i].startsWith("-")) starts.push(a[i++]);
+  let name = null, type = null, iname = false;
+  for (; i < a.length; i++) { if (a[i] === "-name" || a[i] === "-iname") { name = a[++i]; iname = a[i - 1] === "-iname"; } else if (a[i] === "-type") type = a[++i]; }
+  const re = name ? new RegExp("^" + name.replace(/[.+^${}()|[\]\\]/g, "\\$&").replace(/\*/g, ".*").replace(/\?/g, ".") + "$", iname ? "i" : "") : null;
+  const go = (label, n) => { const base = label.split("/").pop(); if ((!re || re.test(base)) && (!type || (type === "d" ? n.t === "d" : type === "f" ? n.t === "f" : n.t === "l"))) c.w(esc(label)); if (n.t === "d" && canRead(n)) Object.keys(n.ch).sort(cmp).forEach(k => go(label + (label.endsWith("/") ? "" : "/") + k, n.ch[k])); };
+  for (const p of starts.length ? starts : ["."]) { const n = getNode(p, c.t.cwd); if (!n) { c.err(`find: '${p}': No such file or directory`); return 1; } go(p, n); }
+};
+CM.tree = c => {
+  const { f, rest } = parseFlags(c.a), p = rest[0] || ".", n = getNode(p, c.t.cwd); if (!n) { c.err(`${p} [error opening dir]`); return 2; }
+  let nd = 0, nf = 0; c.w(`<span class="ls-d">${esc(p)}</span>`);
+  const go = (node, pre) => { const ks = Object.keys(node.ch).filter(k => f.has("a") || !k.startsWith(".")).sort(cmp); ks.forEach((k, i) => { const ch = node.ch[k], last = i === ks.length - 1; const k2 = lsCls(ch); c.w(esc(pre + (last ? "└── " : "├── ")) + (k2 ? `<span class="${k2}">${esc(k)}</span>` : esc(k))); if (ch.t === "d") { nd++; go(ch, pre + (last ? "    " : "│   ")); } else nf++; }); };
+  if (n.t === "d") go(n, ""); c.w(""); c.w(`${nd} director${nd === 1 ? "y" : "ies"}, ${nf} file${nf === 1 ? "" : "s"}`);
+};
+CM.touch = c => { let code = 0; for (const p of c.a.filter(x => !x.startsWith("-"))) { const n = getNode(p, c.t.cwd); if (n) { if (canWrite(segsOf(p, c.t.cwd))) n.mt = new Date(); continue; } const e = writeFile(p, "", false, c.t.cwd); if (e) { c.err(`touch: cannot touch '${p}': ${e}`); code = 1; } } return code; };
+CM.mkdir = c => {
+  const { f, rest } = parseFlags(c.a); let code = 0;
+  for (const p of rest) {
+    const segs = segsOf(p, c.t.cwd); if (!canWrite(segs)) { c.err(`mkdir: cannot create directory '${p}': Permission denied`); code = 1; continue; }
+    let n = ROOT; for (let i = 0; i < segs.length; i++) { const k = segs[i], last = i === segs.length - 1; if (!n.ch[k]) { if (!last && !f.has("p")) { c.err(`mkdir: cannot create directory '${p}': No such file or directory`); code = 1; break; } n.ch[k] = mkD({}, { own: USER, mt: new Date() }); } else if (last && !f.has("p")) { c.err(`mkdir: cannot create directory '${p}': File exists`); code = 1; } n = n.ch[k]; if (n.t !== "d") break; }
+  }
+  return code;
+};
+CM.rmdir = c => { let code = 0; for (const p of c.a) { const segs = segsOf(p, c.t.cwd), n = walk(segs, false), par = walk(segs.slice(0, -1)); if (!n) { c.err(`rmdir: failed to remove '${p}': No such file or directory`); code = 1; } else if (n.t !== "d") { c.err(`rmdir: failed to remove '${p}': Not a directory`); code = 1; } else if (!canWrite(segs)) { c.err(`rmdir: failed to remove '${p}': Permission denied`); code = 1; } else if (Object.keys(n.ch).length) { c.err(`rmdir: failed to remove '${p}': Directory not empty`); code = 1; } else delete par.ch[segs[segs.length - 1]]; } return code; };
+CM.rm = c => {
+  const { f, rest } = parseFlags(c.a), rec = f.has("r") || f.has("R"); let code = 0;
+  if (!rest.length) { c.err("rm: missing operand"); return 1; }
+  for (const p of rest) {
+    const segs = segsOf(p, c.t.cwd);
+    if (!segs.length) { if (rec) { c.err("rm: it is dangerous to operate recursively on '/'\nrm: use --no-preserve-root to override this failsafe"); } else c.err("rm: cannot remove '/': Is a directory"); code = 1; continue; }
+    const n = walk(segs, false), par = walk(segs.slice(0, -1));
+    if (!n) { if (!f.has("f")) { c.err(`rm: cannot remove '${p}': No such file or directory`); code = 1; } continue; }
+    if (n.t === "d" && !rec) { c.err(`rm: cannot remove '${p}': Is a directory`); code = 1; continue; }
+    if (!canWrite(segs) || (segs.length <= 2 && segs[0] === "home")) { c.err(`rm: cannot remove '${p}': Permission denied`); code = 1; continue; }
+    delete par.ch[segs[segs.length - 1]];
+  }
+  return code;
+};
+function copyNode(n) { return n.t === "d" ? mkD(Object.fromEntries(Object.entries(n.ch).map(([k, v]) => [k, copyNode(v)])), { own: USER, mt: new Date() }) : { ...n, own: USER, mt: new Date() }; }
+CM.cp = CM.mv = c => {
+  const { f, rest } = parseFlags(c.a), mv = c.name === "mv"; if (rest.length < 2) { c.err(`${c.name}: missing destination file operand after '${rest[0] || ""}'`); return 1; }
+  const dst = rest[rest.length - 1], srcs = rest.slice(0, -1), dn = getNode(dst, c.t.cwd); let code = 0;
+  for (const s of srcs) {
+    const ss = segsOf(s, c.t.cwd), sn = walk(ss, false); if (!sn) { c.err(`${c.name}: cannot stat '${s}': No such file or directory`); code = 1; continue; }
+    if (sn.t === "d" && !f.has("r") && !f.has("R") && !mv) { c.err(`cp: -r not specified; omitting directory '${s}'`); code = 1; continue; }
+    let ds = segsOf(dst, c.t.cwd); if (dn && dn.t === "d") ds = ds.concat(ss[ss.length - 1]);
+    if (!canWrite(ds) || (mv && !canWrite(ss))) { c.err(`${c.name}: cannot ${mv ? "move" : "create regular file"} '${dst}': Permission denied`); code = 1; continue; }
+    const par = walk(ds.slice(0, -1)); if (!par || par.t !== "d") { c.err(`${c.name}: cannot create regular file '${dst}': No such file or directory`); code = 1; continue; }
+    par.ch[ds[ds.length - 1]] = copyNode(sn); if (mv) delete walk(ss.slice(0, -1)).ch[ss[ss.length - 1]];
+  }
+  return code;
+};
+CM.chmod = c => { const [mode, ...ps] = c.a; let code = 0; for (const p of ps) { const n = getNode(p, c.t.cwd); if (!n) { c.err(`chmod: cannot access '${p}': No such file or directory`); code = 1; } else if (!canWrite(segsOf(p, c.t.cwd))) { c.err(`chmod: changing permissions of '${p}': Operation not permitted`); code = 1; } else if (/^[0-7]{3,4}$/.test(mode)) n.m = parseInt(mode, 8); else if (mode === "+x") n.m |= 0o111; else if (mode === "-x") n.m &= ~0o111; } return code; };
+CM.file = c => { for (const p of c.a) { const n = getNode(p, c.t.cwd); c.w(esc(p) + ": " + (!n ? "cannot open (No such file or directory)" : n.t === "d" ? "directory" : n.bin && n.m & 0o111 ? "ELF 64-bit LSB pie executable, x86-64, dynamically linked" : n.bin ? "Audio file with ID3 version 2.4.0, contains: MPEG ADTS, layer III" : n.c ? "ASCII text" : "empty")); } };
+CM.stat = c => { for (const p of c.a) { const n = getNode(p, c.t.cwd); if (!n) { c.err(`stat: cannot statx '${p}': No such file or directory`); return 1; } c.w(`  File: ${esc(p)}\n  Size: ${sizeOf(n)}\t\tBlocks: ${Math.ceil(sizeOf(n) / 512)}\t\t${n.t === "d" ? "directory" : "regular file"}\nAccess: (${(n.m & 0o7777).toString(8).padStart(4, "0")}/${modeStr(n)})  Uid: (${n.own === USER ? "1000" : "   0"}/${n.own.padStart(8)})\nModify: ${dateStr(n.mt)}`); } };
+CM.basename = c => { c.w(esc((c.a[0] || "").replace(/\/+$/, "").split("/").pop())); };
+CM.dirname = c => { const p = (c.a[0] || "").replace(/\/+$/, "").split("/"); p.pop(); c.w(esc(p.join("/") || (c.a[0] || "").startsWith("/") ? "/" : ".")); };
+CM.seq = c => { const n = c.a.map(Number); const [s, e] = n.length === 1 ? [1, n[0]] : [n[0], n[1]]; for (let i = s; i <= e && i - s < 5000; i++) c.w(String(i)); };
+CM.echo = c => { let a = c.a.slice(), nl = true, esc2 = false; while (a[0] && /^-[neE]+$/.test(a[0])) { if (a[0].includes("n")) nl = false; if (a[0].includes("e")) esc2 = true; a.shift(); } let s = a.join(" "); if (esc2) s = s.replace(/\\n/g, "\n").replace(/\\t/g, "\t").replace(/\\\\/g, "\\"); c.w(esc(s)); };
+CM.printf = c => { const [fmt = "", ...args] = c.a; let i = 0; c.w(esc(fmt.replace(/%([sd%])/g, (m, k) => k === "%" ? "%" : String(args[i++] ?? (k === "d" ? 0 : ""))).replace(/\\n/g, "\n").replace(/\\t/g, "\t"))); };
+CM.tee = c => { const n = c.stdin ?? ""; n.replace(/\n$/, "").split("\n").forEach(l => c.w(esc(l))); c.a.filter(x => !x.startsWith("-")).forEach(p => writeFile(p, n, parseFlags(c.a).f.has("a"), c.t.cwd)); };
+CM.true = () => 0; CM.false = () => 1; CM[":"] = () => 0;
+CM.clear = CM.reset = c => { c.t.out.innerHTML = ""; };
+CM.history = c => { if (c.a[0] === "-c") { c.t.hist.length = 0; return 0; } c.t.hist.forEach((h, i) => c.w(String(i + 1).padStart(5) + "  " + esc(h))); };
+CM.alias = c => { if (!c.a.length) { Object.keys(ALIAS).sort().forEach(k => c.w(`alias ${k}='${esc(ALIAS[k])}'`)); return 0; } for (const x of c.a) { const i = x.indexOf("="); if (i < 0) { if (ALIAS[x]) c.w(`alias ${x}='${esc(ALIAS[x])}'`); else { c.err(`bash: alias: ${x}: not found`); return 1; } } else ALIAS[x.slice(0, i)] = x.slice(i + 1); } };
+CM.unalias = c => { c.a.forEach(k => delete ALIAS[k]); };
+CM.export = c => { if (!c.a.length) { Object.keys(ENV).filter(k => EXPORTED.has(k)).sort().forEach(k => c.w(`declare -x ${k}="${esc(ENV[k])}"`)); return 0; } for (const x of c.a) { const i = x.indexOf("="); const k = i < 0 ? x : x.slice(0, i); if (i >= 0) ENV[k] = x.slice(i + 1); EXPORTED.add(k); } };
+CM.unset = c => { c.a.forEach(k => { delete ENV[k]; EXPORTED.delete(k); }); };
+CM.env = CM.printenv = c => { if (c.name === "printenv" && c.a[0]) { if (ENV[c.a[0]] != null && EXPORTED.has(c.a[0])) c.w(esc(ENV[c.a[0]])); return ENV[c.a[0]] != null ? 0 : 1; } Object.keys(ENV).filter(k => EXPORTED.has(k)).forEach(k => c.w(`${k}=${esc(ENV[k])}`)); };
+CM.source = CM["."] = () => 0;
+CM.type = CM.which = c => {
+  let code = 0;
+  for (const x of c.a) {
+    if (c.name === "type" && ALIAS[x]) c.w(`${esc(x)} is aliased to \`${esc(ALIAS[x])}'`);
+    else if (["cd", "echo", "export", "alias", "unset", "type", "history", "exit", "source", "help", "printf"].includes(x) && c.name === "type") c.w(`${esc(x)} is a shell builtin`);
+    else if (CM[x] && x.length) c.w(c.name === "type" ? `${esc(x)} is /usr/bin/${esc(x)}` : `/usr/bin/${esc(x)}`);
+    else { if (c.name === "type") c.err(`bash: type: ${x}: not found`); else c.err(`which: no ${x} in (${ENV.PATH})`); code = 1; }
+  }
+  return code;
+};
+CM.whatis = c => { const x = c.a[0]; if (WHATIS[x]) c.w(`${esc(x)} (1)`.padEnd(20) + `- ${esc(WHATIS[x])}`); else { c.err(`${x}: nothing appropriate.`); return 16; } };
+CM.man = c => {
+  const x = c.a[0]; if (!x) { c.err("What manual page do you want?\nFor example, try 'man man'."); return 1; }
+  const m = MANS[x]; if (!m) { c.err(`No manual entry for ${x}`); return 16; }
+  const U1 = x.toUpperCase();
+  c.w(`${U1}(1)${" ".repeat(24)}User Commands${" ".repeat(24)}${U1}(1)\n\n<span class="b">NAME</span>\n       ${esc(x)} - ${esc(m[0])}\n\n<span class="b">SYNOPSIS</span>\n       <span class="b">${esc(m[1])}</span>\n\n<span class="b">DESCRIPTION</span>\n       ${esc(m[2]).replace(/\n/g, "\n       ")}\n`);
+};
+CM.help = c => {
+  const row = (a, b) => `<span class="a">${esc(a)}</span><span class="d">${esc(b)}</span>`;
+  c.w(`<span class="b">Aascharya's portfolio shell</span> <span class="d">· GNU bash, version ${BASH_V}(1)-release (x86_64-pc-linux-gnu)</span>`);
+  c.w(`<div class="help">${[
+    ["", "ME"], ["about / projects / skills / contact", "the short version of me"], ["neofetch", "system and me, at a glance"], ["cat about.txt", "or read the files in ~"],
+    ["", "SHELL"], ["ls cd cat tree find grep", "move around, read, search (try ls -la, tree)"], ["vim file", "edit a file. Esc then :wq saves and quits"], ["| > >> && ;", "pipes and redirects work, e.g. ls | grep txt"],
+    ["pacman -Q / -Ss x", "query packages. Tab completes, Ctrl+R searches history"], ["htop", "process viewer. q quits"], ["man ls", "a few manual pages"],
+    ["", "FUN"], ["cmatrix [-C blue]", "the Matrix rain"], ["sl", "a steam locomotive"], ["snake", "full-screen, arrows or swipe, snake -w wraps walls"], ["fortune | cowsay", "a talking cow"], ["mpv", "plays the song on this site"],
+    ["", "THE PAGE"], ["open work", "scroll to work, about, skills or contact"], ["rice", "restyle this terminal: themes, prompt, transparency"], ["theme", "switch the page between light and dark"], ["fullscreen", "make this terminal full screen. Esc leaves"]
+  ].map(([a, b]) => a ? row(a, b) : `<span class="d">${b}</span><span></span>`).join("")}</div>`);
+};
+CM.whoami = c => { c.w(USER); };
+CM.id = c => { c.w("uid=1000(guest) gid=1000(guest) groups=1000(guest)"); };
+CM.groups = c => { c.w("guest"); };
+CM.hostname = c => { c.w(HOSTN); };
+CM.hostnamectl = c => { c.w(` Static hostname: ${HOSTN}\n       Icon name: computer-vm\n         Chassis: vm 🖴\n      Machine ID: 4f1e0b6f3b7c4a60a1f2d6c1d0a1b2c3\n         Boot ID: 7d9c2a41e0b84c1f9a6e5d2b8c3f1a07\n  Virtualization: browser\nOperating System: Arch Linux\n          Kernel: Linux ${KERNEL}\n    Architecture: x86-64`); };
+CM.uname = c => {
+  const { f } = parseFlags(c.a), parts = [];
+  if (f.has("a") || !c.a.length || f.has("s")) parts.push("Linux"); if (f.has("a") || f.has("n")) parts.push(HOSTN); if (f.has("a") || f.has("r")) parts.push(KERNEL);
+  if (f.has("a")) parts.push("#1 SMP PREEMPT_DYNAMIC Tue, 14 Oct 2026 08:12:41 +0000"); if (f.has("a") || f.has("m")) parts.push("x86_64"); if (f.has("a") || f.has("o")) parts.push("GNU/Linux");
+  c.w(esc(parts.join(" ")));
+};
+CM.date = c => { c.w(esc(dateStr())); };
+CM.cal = c => {
+  const x = np(), first = new Date(Date.UTC(x.Y, x.M - 1, 1)).getUTCDay(), dim = new Date(Date.UTC(x.Y, x.M, 0)).getUTCDate(), t = `${MONF[x.M - 1]} ${x.Y}`;
+  c.w(" ".repeat(Math.floor((20 - t.length) / 2)) + t + "\nSu Mo Tu We Th Fr Sa");
+  let row = "   ".repeat(first); for (let d = 1; d <= dim; d++) { row += (d === x.D ? `<span class="rv">${String(d).padStart(2)}</span>` : String(d).padStart(2)) + " "; if ((first + d) % 7 === 0) { c.w(row.trimEnd()); row = ""; } } if (row) c.w(row.trimEnd());
+};
+CM.uptime = c => { const s = Math.floor((Date.now() - T_BOOT) / 1000), x = np(); c.w(` ${pad2(x.h)}:${pad2(x.m)}:${pad2(x.s)} up ${s < 60 ? s + " sec" : Math.floor(s / 60) + " min"},  1 user,  load average: 0.08, 0.06, 0.02`); };
+CM.free = c => { const h = parseFlags(c.a).f.has("h"); c.w(h ? "               total        used        free      shared  buff/cache   available\nMem:            15Gi       1.9Gi        11Gi       112Mi       2.3Gi        13Gi\nSwap:             0B          0B          0B" : "               total        used        free      shared  buff/cache   available\nMem:        16143360     1992104    11847232      114688     2412544    14151256\nSwap:              0           0           0"); };
+CM.df = c => { c.w("Filesystem      Size  Used Avail Use% Mounted on\ndev             7.7G     0  7.7G   0% /dev\nrun             7.7G  1.4M  7.7G   1% /run\n/dev/nvme0n1p2  233G   41G  180G  19% /\ntmpfs           7.7G  8.0K  7.7G   1% /dev/shm\n/dev/nvme0n1p1  1.0G  312M  712M  31% /boot\ntmpfs           1.6G   68K  1.6G   1% /run/user/1000"); };
+CM.lsblk = c => { c.w("NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS\nnvme0n1     259:0    0 238.5G  0 disk \n├─nvme0n1p1 259:1    0     1G  0 part /boot\n└─nvme0n1p2 259:2    0 237.5G  0 part /"); };
+CM.who = c => { const x = np(new Date(T_BOOT)); c.w(`guest    tty1         ${x.Y}-${pad2(x.M)}-${pad2(x.D)} ${pad2(x.h)}:${pad2(x.m)}`); };
+CM.ps = c => { const { f, rest } = parseFlags(c.a); if (f.has("a") || rest.includes("aux")) c.w("USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot           1  0.0  0.1  22304 13312 ?        Ss   00:00   0:01 /sbin/init\nroot         312  0.0  0.1  21760 11008 ?        Ss   00:00   0:00 /usr/lib/systemd/systemd-journald\nroot         498  0.0  0.0  12348  7424 ?        Ss   00:00   0:00 /usr/lib/systemd/systemd-logind\nguest       4210  0.0  0.1  14852  8960 tty1     Ss   00:00   0:00 -bash\nguest       4242  0.2  0.5 412308 41216 tty1     Sl+  00:00   0:03 portfolio --site aascharyapaudel.com.np\nguest       4301  0.0  0.0  11200  4352 tty1     R+   00:00   0:00 ps aux"); else c.w("    PID TTY          TIME CMD\n   4210 tty1     00:00:00 bash\n   4301 tty1     00:00:00 ps"); };
+CM.sleep = async c => { await nap((parseFloat(c.a[0]) || 0) * 1000, c.sig); };
+CM.yes = async c => { const s = esc(c.a.join(" ") || "y"); if (!c.tty) { for (let i = 0; i < 200; i++) c.w(s); return; } for (;;) { for (let i = 0; i < 30; i++) c.w(s); await nap(30, c.sig); } };
+CM.exit = CM.logout = async c => { await c.t.leave(); };
+CM.bash = CM.sh = CM.zsh = c => { if (c.a[0] === "-c" && c.a[1]) return c.t.execLine(c.a[1], c.sig); if (c.a[0] === "--version") { c.w(`GNU bash, version ${BASH_V}(1)-release (x86_64-pc-linux-gnu)`); return 0; } c.t.spawn(); };
+CM.sudo = async c => {
+  if (c.a[0] === "-v" || c.a[0] === "-l" || c.a.length) { const pw = await c.t.ask("[sudo] password for guest: ", true); if (pw === null) return 130; await nap(700, c.sig); c.err("guest is not in the sudoers file."); return 1; }
+  c.err("usage: sudo -h | -K | -k | -V"); return 1;
+};
+CM.su = async c => { const pw = await c.t.ask("Password: ", true); if (pw === null) return 130; await nap(900, c.sig); c.err("su: Authentication failure"); return 1; };
+CM.passwd = c => { c.err("passwd: Authentication token manipulation error"); return 10; };
+CM.systemctl = c => {
+  const [sub, unit] = c.a.filter(x => !x.startsWith("-"));
+  if (sub === "status") {
+    const u = (unit || "").replace(/\.service$/, "");
+    if (u === "portfolio") { c.w(`<span class="g">●</span> portfolio.service - Aascharya's portfolio\n     Loaded: loaded (/usr/lib/systemd/system/portfolio.service; enabled; preset: disabled)\n     Active: <span class="g">active (running)</span> since ${dateStr(new Date(T_BOOT))}; ${Math.max(1, Math.round((Date.now() - T_BOOT) / 60000))}min ago\n   Main PID: 4242 (portfolio)\n      Tasks: 4 (limit: 18907)\n     Memory: 41.2M\n     CGroup: /system.slice/portfolio.service\n             └─4242 portfolio --site aascharyapaudel.com.np`); return 0; }
+    if (!unit) { c.w(`<span class="g">●</span> ${HOSTN}\n    State: <span class="g">running</span>\n    Units: 238 loaded (incl. loaded aliases)\n     Jobs: 0 queued\n   Failed: 0 units`); return 0; }
+    c.err(`Unit ${unit}${unit.includes(".") ? "" : ".service"} could not be found.`); return 4;
+  }
+  if (["start", "stop", "restart", "enable", "disable", "reload"].includes(sub)) { c.err(`Failed to ${sub} ${unit || ""}: Interactive authentication required.`); return 1; }
+  c.err("Usage: systemctl status [UNIT]"); return 1;
+};
+CM.pacman = c => {
+  const { f, rest, long } = parseFlags(c.a), ops = [...f].join(""), pk = n => PKGS.find(p => p[0] === n);
+  if (long.has("version") || f.has("V")) { c.w(" .--.                  Pacman v7.1.0 - libalpm v16.0.1\n/ _.-' .-.  .-.  .-.   Copyright (C) 2006-2025 Pacman Development Team\n\\  '-. '-'  '-'  '-'   Copyright (C) 2002-2006 Judd Vinet\n '--'\n                       This program may be freely redistributed under\n                       the terms of the GNU General Public License."); return 0; }
+  if (!ops) { c.err("error: no operation specified (use -h for help)"); return 1; }
+  if (ops.includes("S") && (ops.includes("y") || ops.includes("u")) && !ops.includes("s")) { c.err("error: you cannot perform this operation unless you are root."); return 1; }
+  if (ops.includes("Q")) {
+    if (ops.includes("i")) { const p = pk(rest[0]); if (!p) { c.err(`error: package '${rest[0]}' was not found`); return 1; } c.w(`Name            : ${p[0]}\nVersion         : ${p[1]}\nDescription     : ${esc(p[3])}\nArchitecture    : x86_64\nURL             : https://archlinux.org/packages/${p[2]}/x86_64/${p[0]}/\nLicenses        : GPL-3.0-or-later\nInstalled Size  : ${(p[0].length * 1.7 + 1.2).toFixed(2)} MiB\nPackager        : Arch Linux`); return 0; }
+    if (ops.includes("s")) { const t = rest[0] || ""; PKGS.filter(p => p[0].includes(t) || p[3].toLowerCase().includes(t.toLowerCase())).forEach(p => c.w(`<span class="b">local/</span>${esc(p[0])} <span class="g">${esc(p[1])}</span>\n    ${esc(p[3])}`)); return 0; }
+    if (ops.includes("e") || ops.includes("q")) PKGS.forEach(p => c.w(esc(ops.includes("q") ? p[0] : p[0] + " " + p[1]))); else PKGS.forEach(p => c.w(`${esc(p[0])} ${esc(p[1])}`));
+    return 0;
+  }
+  if (ops.includes("S") && ops.includes("s")) { const t = (rest[0] || "").toLowerCase(); const hits = PKGS.filter(p => p[0].includes(t) || p[3].toLowerCase().includes(t)); if (!hits.length) return 1; hits.forEach(p => c.w(`<span class="b">${p[2]}/</span><span class="b">${esc(p[0])}</span> <span class="g">${esc(p[1])}</span>\n    ${esc(p[3])}`)); return 0; }
+  if (ops.includes("S") && ops.includes("i")) { const p = pk(rest[0]); if (!p) { c.err(`error: package '${rest[0]}' was not found`); return 1; } c.w(`Repository      : ${p[2]}\nName            : ${p[0]}\nVersion         : ${p[1]}\nDescription     : ${esc(p[3])}\nArchitecture    : x86_64`); return 0; }
+  c.err("error: you cannot perform this operation unless you are root."); return 1;
+};
+CM.yay = null; delete CM.yay;
+CM.git = c => {
+  const s = c.a[0];
+  if (!s || s === "help") { c.w("usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           <command> [<args>]"); return 0; }
+  if (s === "--version" || s === "-v") { c.w("git version 2.51.0"); return 0; }
+  if (s === "clone") { c.w(`Cloning into '${esc((c.a[1] || "repo").split("/").pop().replace(/\.git$/, ""))}'...`); c.err(`fatal: unable to access '${c.a[1] || ""}': Could not resolve host`); return 128; }
+  c.err("fatal: not a git repository (or any of the parent directories): .git"); return 128;
+};
+CM.python = CM.python3 = c => { if (c.a[0] === "--version" || c.a[0] === "-V") { c.w("Python 3.13.7"); return 0; } c.err("python: the interactive interpreter is not available in this demo. Try python --version"); return 1; };
+CM.node = c => { if (c.a[0] === "--version" || c.a[0] === "-v") { c.w("v24.9.0"); return 0; } c.err("node: the interactive interpreter is not available in this demo. Try node --version"); return 1; };
+CM.gcc = c => { if (c.a[0] === "--version") { c.w("gcc (GCC) 15.2.1 20250813"); return 0; } c.err("gcc: fatal error: no input files\ncompilation terminated."); return 1; };
+CM.ping = async c => {
+  const h = c.a.filter(x => !x.startsWith("-"))[0]; if (!h) { c.err("ping: usage error: Destination address required"); return 2; }
+  if (!["localhost", "127.0.0.1", "::1"].includes(h)) { c.err(`ping: ${h}: Temporary failure in name resolution`); return 2; }
+  c.w(`PING ${esc(h)} (127.0.0.1) 56(84) bytes of data.`); let n = 0; const max = parseInt((c.a[c.a.indexOf("-c") + 1]) || "0") || 1e9;
+  try { for (; n < max; n++) { await nap(n ? 1000 : 150, c.sig); c.w(`64 bytes from localhost (127.0.0.1): icmp_seq=${n + 1} ttl=64 time=${(0.02 + Math.random() * 0.05).toFixed(3)} ms`); } } catch (e) { if (e !== ABORT) throw e; }
+  c.w(`\n--- ${esc(h)} ping statistics ---\n${n} packets transmitted, ${n} received, 0% packet loss, time ${Math.max(0, n - 1) * 1000}ms`); return 0;
+};
+CM.curl = CM.wget = c => { const u = c.a.filter(x => !x.startsWith("-"))[0] || ""; c.err(c.name === "curl" ? `curl: (6) Could not resolve host: ${u.replace(/^https?:\/\//, "").split("/")[0]}` : `${c.name}: unable to resolve host address '${u}'`); return 6; };
+CM.ssh = c => { c.err(`ssh: Could not resolve hostname ${(c.a.filter(x => !x.startsWith("-"))[0] || "").split("@").pop()}: Temporary failure in name resolution`); return 255; };
+CM.fortune = c => { c.w(esc(FORTUNES[Math.floor(Math.random() * FORTUNES.length)])); };
+CM.cowsay = c => { const t = c.a.length ? c.a.join(" ") : (c.stdin ?? "Moo.").trim() || "Moo."; c.w(esc(cowsay(t).replace(/\n$/, ""))); };
+CM.lolcat = c => { const src = c.a.length ? c.a.join(" ") : (c.stdin ?? ""); lines({ stdin: src }).forEach((l, r) => c.w([...l].map((ch, i) => `<span style="color:hsl(${(i * 9 + r * 20) % 360} 90% 65%)">${esc(ch)}</span>`).join(""))); };
+CM.neofetch = CM.fastfetch = CM.pfetch = c => {
+  const cols = colsNow(), up = Math.floor((Date.now() - T_BOOT) / 1000), upS = up < 60 ? up + " secs" : Math.floor(up / 60) + " mins", scr = `${screen.width}x${screen.height}`;
+  const k = (a, b) => `<span class="b a">${a}</span>: ${esc(b)}`;
+  const info = [
+    `<span class="b a">${USER}</span>@<span class="b a">${HOSTN}</span>`, "-".repeat(USER.length + HOSTN.length + 1),
+    k("OS", "Arch Linux x86_64"), k("Host", "aascharyapaudel.com.np"), k("Kernel", "Linux " + KERNEL), k("Uptime", upS), k("Packages", PKGS.length + " (pacman)"), k("Shell", "bash " + BASH_V),
+    k("Resolution", scr), k("WM", "hyprland"), k("Theme", PAL[RICE.pal].n), k("Terminal", "kitty"), k("CPU", (navigator.hardwareConcurrency || 4) + " threads (your browser)"), k("Role", DATA.roles.join(", ")),
+    k("Location", (DATA.contact.links.find(l => /location/i.test(l[0])) || [0, "Nepal"])[1]), k("Song", missing ? "none yet" : SONG.title + (aud.paused ? " (paused)" : " (playing)")),
+    "", ["var(--term-dim)", "var(--red)", "var(--green)", "var(--yellow)", "var(--blue)", "var(--magenta)", "var(--cyan)", "var(--term-fg)"].map(x => `<span style="background:${x}">   </span>`).join("")
+  ];
+  if (cols < 56) { c.w(`<span class="arch">${esc(ARCH.join("\n"))}</span>\n\n` + info.join("\n")); return; }
+  c.w(info.map((l, i) => `<span class="arch">${esc((ARCH[i] || "").padEnd(18))}</span>${l}`).join("\n"));
+};
+CM.about = c => { DATA.about.forEach(p => c.w(esc(p))); };
+CM.projects = c => { DATA.projects.forEach(p => c.w(`<span class="b">${esc(p.title)}</span> <span class="d">${esc(p.year)}</span>\n  ${esc(p.desc)}\n  <span class="a">${esc(p.stack.join(" · "))}</span>`)); c.w(`<span class="d">tip: cd projects; cat ${esc(DATA.projects[0].slug)}.md</span>`); };
+CM.skills = c => { Object.entries(DATA.skills).forEach(([k, v]) => c.w(`<span class="a">${esc(k.padEnd(10))}</span>${esc(v.join(", "))}`)); };
+CM.contact = c => { c.w(`<span class="a">email     </span>${lk(DATA.contact.email, "mailto:" + DATA.contact.email)}`); DATA.contact.links.forEach(([k, v, h]) => c.w(`<span class="a">${esc(k.toLowerCase().padEnd(10))}</span>${h ? lk(v, h) : esc(v)}`)); };
+CM.open = c => { const id = { about: "about", work: "work", projects: "work", skills: "skills", contact: "contact", terminal: "terminal", top: "top" }[(c.a[0] || "").toLowerCase()]; if (!id) { c.err("usage: open work | about | terminal | skills | contact"); return 1; } const el = document.getElementById(id); if (el) el.scrollIntoView({ block: "start" }); };
+CM.theme = c => { const x = (c.a[0] || "").toLowerCase(); setTheme(x === "light" || x === "dark" ? x : theme() === "dark" ? "light" : "dark"); c.w(`theme: ${theme()}`); };
+CM.rice = c => {
+  const [k, v] = c.a, keys = Object.keys(PAL);
+  const save = () => { applyRice(); };
+  if (!k || k === "list" || k === "help") {
+    c.w(`<span class="b">rice</span> <span class="d">· make this terminal yours (saved in your browser)</span>`);
+    keys.forEach(x => c.w(`${x === RICE.pal ? "<span class=\"g\">●</span>" : " "} <span class="a">${esc(x.padEnd(11))}</span>${["red", "green", "yellow", "blue", "magenta", "cyan"].map(n => `<span style="background:${PAL[x][n]}">  </span>`).join("")} <span class="d">${esc(PAL[x].n)}</span>`));
+    c.w(`\n<span class="d">usage:</span> rice <span class="a">&lt;theme&gt;</span>   rice prompt <span class="a">powerline|arrow|lean|plain</span>   rice opacity <span class="a">40-100</span>\n       rice blur <span class="a">0-24</span>   rice font <span class="a">11-20</span>   rice gap <span class="a">0-30</span>   rice random   rice reset\n<span class="d">now:</span> ${esc(RICE.pal)} · ${esc(RICE.prompt)} prompt · ${RICE.op}% opacity · blur ${RICE.blur}px · ${RICE.fs}px font`);
+    return 0;
+  }
+  const num = (lo, hi) => { const n = parseFloat(v); if (!(n >= lo && n <= hi)) { c.err(`rice: ${k} takes a number from ${lo} to ${hi}`); return null; } return n; };
+  if (PAL[k]) { RICE.pal = k; save(); c.w(`<span class="g">theme:</span> ${esc(PAL[k].n)}`); }
+  else if (k === "random") { const o = keys.filter(x => x !== RICE.pal); RICE.pal = o[Math.floor(Math.random() * o.length)]; save(); c.w(`<span class="g">theme:</span> ${esc(PAL[RICE.pal].n)}`); }
+  else if (k === "prompt") { if (!["powerline", "arrow", "lean", "plain"].includes(v)) { c.err("rice prompt: powerline | arrow | lean | plain"); return 1; } RICE.prompt = v; save(); c.w(`<span class="g">prompt:</span> ${v}`); }
+  else if (k === "opacity") { const n = num(40, 100); if (n == null) return 1; RICE.op = Math.round(n); save(); c.w(`<span class="g">opacity:</span> ${RICE.op}%`); }
+  else if (k === "blur") { const n = num(0, 24); if (n == null) return 1; RICE.blur = Math.round(n); save(); c.w(`<span class="g">blur:</span> ${RICE.blur}px`); }
+  else if (k === "font") { const n = num(11, 20); if (n == null) return 1; RICE.fs = n; save(); c.w(`<span class="g">font size:</span> ${n}px`); }
+  else if (k === "gap") { const n = num(0, 30); if (n == null) return 1; RICE.gap = Math.round(n); save(); c.w(`<span class="g">gap:</span> ${RICE.gap}px`); }
+  else if (k === "reset") { RICE = { ...RICE0 }; save(); c.w("<span class=\"g\">back to the defaults</span>"); }
+  else { c.err(`rice: unknown option '${k}'. Type rice for the list.`); return 1; }
+};
+CM.colors = c => { const n = ["term-dim", "red", "green", "yellow", "blue", "magenta", "cyan", "term-fg"]; c.w(n.map(x => `<span style="background:var(--${x})">    </span>`).join("") + "\n" + n.map(x => `<span style="background:var(--${x});filter:brightness(1.25)">    </span>`).join("")); };
+CM.btop = CM.bpytop = (c) => CM.htop(c);
+CM.fullscreen = CM.fs = c => { toggleFull(); };
+CM.song = c => { c.w(`<span class="b">${esc(SONG.title)}</span> <span class="d">by ${esc(SONG.artist)}</span>\n` + (missing ? "<span class=\"d\">no file yet: add assets/song.mp3</span>" : `<span class="d">${aud.paused ? "paused. type play" : "playing. type pause"}</span>`)); };
+CM.play = c => { if (!Player.play()) { c.err("no song file found. Add assets/song.mp3"); return 1; } c.w("playing"); };
+CM.pause = c => { Player.pause(); c.w("paused"); };
+CM.playerctl = c => { const s = c.a[0]; if (s === "status") c.w(aud.paused ? "Paused" : "Playing"); else if (s === "play") Player.play(); else if (s === "pause") Player.pause(); else if (s === "play-pause") Player.toggle(); else if (s === "metadata") c.w(`mpv xesam:title                 ${esc(SONG.title)}\nmpv xesam:artist                ${esc(SONG.artist)}`); else { c.err("Usage: playerctl [play|pause|play-pause|status|metadata]"); return 1; } };
+CM.mpv = async c => {
+  if (missing) { c.err("mpv: no song file found. Add assets/song.mp3"); return 1; }
+  Player.play(); await nap(200, c.sig).catch(() => {});
+  const tot = () => isFinite(aud.duration) ? aud.duration : 0, fmt = s => `${pad2(Math.floor(s / 3600))}:${pad2(Math.floor(s / 60) % 60)}:${pad2(Math.floor(s) % 60)}`;
+  c.w(`Playing: ${HOME}/Music/song.mp3\n <span class="g">(+)</span> Audio --aid=1 (mp3 2ch 44100 Hz 192 kbps)\nAO: [pipewire] 44100Hz stereo 2ch floatp`);
+  const line = document.createElement("div"); c.t.out.appendChild(line);
+  const upd = () => { line.innerHTML = `<span class="g">AO:</span> A: ${fmt(aud.currentTime)} / ${fmt(tot())} (${tot() ? Math.floor(100 * aud.currentTime / tot()) : 0}%)`; c.t.scroll(); };
+  try { for (;;) { upd(); await nap(500, c.sig); } } catch (e) { if (e !== ABORT) throw e; }
+  Player.pause(); c.w("\nExiting... (Quit)"); return 0;
+};
+CM.vim = CM.nvim = CM.vi = c => runApp(c.t, api => vimApp(api, c.a.filter(x => !x.startsWith("-"))[0], c.t), true);
+CM.htop = CM.top = c => runApp(c.t, api => htopApp(api));
+CM.cmatrix = c => { const { rest } = parseFlags(c.a); const ci = c.a.indexOf("-C"); return runApp(c.t, api => matrixApp(api, ci >= 0 ? c.a[ci + 1] : "green")); };
+CM.sl = c => runApp(c.t, api => slApp(api));
+CM.snake = CM.nsnake = c => runApp(c.t, api => snakeApp(api, { wrap: c.a.includes("-w") || c.a.includes("--wrap") }));
+
+/* ----- parsing ----- */
+let PT = null;
+function calc(expr) { expr = expr.replace(/[A-Za-z_][A-Za-z0-9_]*/g, m => ENV[m] ?? "0"); if (!/^[\d+\-*/%().\s]+$/.test(expr)) return 0; try { return Math.trunc(Function("\"use strict\";return (" + expr + ")")()) || 0; } catch (_) { return 0; } }
+function expandDollar(s, i) {
+  const n = s[i + 1];
+  if (n === "(" && s[i + 2] === "(") { const j = s.indexOf("))", i); return [String(calc(s.slice(i + 3, j < 0 ? s.length : j))), j < 0 ? s.length : j + 2]; }
+  if (n === "(") { let d = 1, j = i + 2; while (j < s.length && d) { if (s[j] === "(") d++; else if (s[j] === ")") d--; j++; } return [runSync(s.slice(i + 2, j - 1)).replace(/\n+$/, "").replace(/\n/g, " "), j]; }
+  if (n === "{") { const j = s.indexOf("}", i); return [ENV[s.slice(i + 2, j)] ?? "", j + 1]; }
+  if (n === "?") return [String(ENV["?"] ?? 0), i + 2]; if (n === "$") return ["4210", i + 2];
+  const m = /^[A-Za-z_][A-Za-z0-9_]*/.exec(s.slice(i + 1)); if (m) return [ENV[m[0]] ?? "", i + 1 + m[0].length];
+  return ["$", i + 1];
+}
+function tokenize(line) {
+  const tk = []; let cur = null, i = 0; const push = () => { if (cur) { tk.push({ w: cur }); cur = null; } };
+  while (i < line.length) {
+    const ch = line[i];
+    if (ch === "'") { cur = cur || { s: "", q: true }; cur.q = true; const j = line.indexOf("'", i + 1), e = j < 0 ? line.length : j; cur.s += line.slice(i + 1, e); i = e + 1; continue; }
+    if (ch === "\"") { cur = cur || { s: "", q: true }; cur.q = true; i++; while (i < line.length && line[i] !== "\"") { if (line[i] === "\\" && "\"\\$`".includes(line[i + 1] || "x")) { cur.s += line[i + 1]; i += 2; continue; } if (line[i] === "$") { const [v, ni] = expandDollar(line, i); cur.s += v; i = ni; continue; } cur.s += line[i++]; } i++; continue; }
+    if (ch === "\\") { cur = cur || { s: "", q: true }; cur.q = true; cur.s += line[i + 1] || ""; i += 2; continue; }
+    if (ch === "$") { cur = cur || { s: "", q: false }; const [v, ni] = expandDollar(line, i); cur.s += v; i = ni; continue; }
+    if (ch === "~" && !cur && (!line[i + 1] || line[i + 1] === "/" || /\s/.test(line[i + 1]))) { cur = { s: HOME, q: true }; i++; continue; }
+    if (ch === "#" && !cur) break;
+    if (/\s/.test(ch)) { push(); i++; continue; }
+    if (";&|<>".includes(ch)) {
+      if (ch === ">" && cur && cur.s === "2" && !cur.q) { cur = null; const two = line.slice(i, i + 2) === ">>"; i += two ? 2 : 1; if (line[i] === "&") i += 2; tk.push({ op: "2>" }); continue; }
+      push(); const two = line.slice(i, i + 2);
+      if (two === "&&" || two === "||" || two === ">>") { tk.push({ op: two }); i += 2; } else { tk.push({ op: ch }); i++; } continue;
+    }
+    cur = cur || { s: "", q: false }; cur.s += ch; i++;
+  }
+  push(); return tk;
+}
+const tokenWords = s => tokenize(s).filter(k => k.w).map(k => k.w.s);
+function build(tokens, t) {
+  const seq = []; let stage = { argv: [], redirs: [] }, pipe = [stage], conn = ";";
+  const endPipe = nc => { if (stage.argv.length || stage.redirs.length || pipe.length > 1) seq.push({ pipe, conn }); stage = { argv: [], redirs: [] }; pipe = [stage]; conn = nc; };
+  for (let i = 0; i < tokens.length; i++) {
+    const k = tokens[i];
+    if (k.op) {
+      if (k.op === "|") { stage = { argv: [], redirs: [] }; pipe.push(stage); }
+      else if (k.op === ";" || k.op === "&") endPipe(";"); else if (k.op === "&&" || k.op === "||") endPipe(k.op);
+      else { const nx = tokens[i + 1]; if (!nx || nx.op) throw new Error("syntax error near unexpected token `" + (nx ? nx.op : "newline") + "'"); i++; stage.redirs.push({ op: k.op, file: nx.w.s }); }
+    } else { const w = k.w; if (!w.q && /[*?]/.test(w.s)) { const g = glob(w.s, t.cwd); if (g.length) { stage.argv.push(...g); continue; } } stage.argv.push(w.s); }
+  }
+  endPipe(";"); return seq;
+}
+function mkSink(term) { const buf = []; return { live: !!term, w(h) { if (term) term.print(h); else buf.push(html2text(h)); }, text() { return buf.length ? buf.join("\n") + "\n" : ""; } }; }
+function callStage(st, stdin, sink, t, sig) {
+  let argv = st.argv.slice();
+  while (argv.length && /^[A-Za-z_][A-Za-z0-9_]*=/.test(argv[0])) { const x = argv.shift(), i = x.indexOf("="); ENV[x.slice(0, i)] = x.slice(i + 1); }
+  if (!argv.length) return 0;
+  if (ALIAS[argv[0]]) argv = tokenWords(ALIAS[argv[0]]).concat(argv.slice(1));
+  const name = argv[0], fn = CM[name];
+  const c = { t, name, a: argv.slice(1), stdin, tty: sink.live, sig, w: sink.w, err: m => t.print(esc(m)) };
+  if (c.a.includes("--help") && MANS[name]) { c.w(`Usage: ${esc(MANS[name][1])}\n${esc(MANS[name][0])}.`); return 0; }
+  if (!fn) { if (name.includes("/")) { t.print(`bash: ${esc(name)}: No such file or directory`); return 127; } t.print(`bash: ${esc(name)}: command not found`); return 127; }
+  return fn(c);
+}
+function runSync(line) { let seq; try { seq = build(tokenize(line), PT); } catch (_) { return ""; } let out = ""; for (const it of seq) { let stdin = null; for (const st of it.pipe) { const s = mkSink(null); callStage(st, stdin, s, PT, null); stdin = s.text(); } out += stdin || ""; } return out; }
+async function runPipeline(t, pipe, sig) {
+  let stdin = null, code = 0;
+  for (let i = 0; i < pipe.length; i++) {
+    const st = pipe[i], last = i === pipe.length - 1, outR = st.redirs.find(r => r.op === ">" || r.op === ">>"), inR = st.redirs.find(r => r.op === "<");
+    if (inR) { const n = getNode(inR.file, t.cwd); if (!n || n.t !== "f") { t.print(`bash: ${esc(inR.file)}: No such file or directory`); return 1; } stdin = n.c; }
+    const sink = mkSink(last && !outR ? t : null); let r = callStage(st, stdin, sink, t, sig); if (r instanceof Promise) r = await r;
+    code = typeof r === "number" ? r : 0;
+    if (outR) { const e = writeFile(outR.file, sink.text(), outR.op === ">>", t.cwd); if (e) { t.print(`bash: ${esc(outR.file)}: ${e}`); code = 1; } stdin = ""; } else stdin = sink.text();
+  }
+  return code;
+}
+
+/* ----- full-screen programs ----- */
+let ALT = null;
+function runApp(t, factory, kb) {
+  return new Promise(resolve => {
+    const el = document.createElement("div"); el.className = "alt";
+    const sink = document.createElement("input"); sink.className = "alt-in"; Object.assign(sink, { type: "text", autocomplete: "off", spellcheck: false, autocapitalize: "none" }); sink.setAttribute("aria-label", "program input");
+    const x = document.createElement("button"); x.className = "alt-x"; x.type = "button"; x.textContent = "✕ close"; el.append(sink, x);
+    $(".term").appendChild(el); body.classList.add("alt");
+    const m = textMeasure(); let resizeCb = null;
+    const api = { root: el, sink, cw: m.w, lh: m.lh, get w() { return el.clientWidth; }, get h() { return el.clientHeight; }, get cols() { return Math.floor(el.clientWidth / m.w); }, get rows() { return Math.floor(el.clientHeight / m.lh); }, onResize(f) { resizeCb = f; }, exit };
+    let app = null, done = false;
+    function exit() { if (done) return; done = true; ro.disconnect(); try { app && app.stop && app.stop(); } catch (_) {} el.remove(); body.classList.remove("alt"); ALT = null; resolve(0); if (fine) t.focus(); }
+    const ro = new ResizeObserver(() => { resizeCb && resizeCb(); }); ro.observe(el);
+    app = factory(api);
+    sink.addEventListener("keydown", e => { if (e.key === "Unidentified") return; if (app.key && app.key(e) !== false) e.preventDefault(); });
+    sink.addEventListener("input", () => { const v = sink.value; sink.value = ""; for (const ch of v) app.key && app.key({ key: ch, preventDefault() {}, ctrlKey: false, metaKey: false }); });
+    x.addEventListener("click", exit); el.addEventListener("pointerdown", () => { if (fine || kb) sink.focus({ preventScroll: true }); });
+    ALT = { sink, exit }; if (fine || kb) sink.focus({ preventScroll: true });
+  });
+}
+function matrixApp(api, color) {
+  const COL = { green: "#00ff41", red: "#ff3b3b", blue: "#3b9bff", yellow: "#ffe83b", cyan: "#3bffee", magenta: "#ff3bf0", white: "#e8e8e8" }[color] || "#00ff41";
+  const cv = document.createElement("canvas"); cv.className = "alt-cv"; api.root.appendChild(cv); const g = cv.getContext("2d");
+  const CH = "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ0123456789:.=*+-<>|";
+  let W, H, cols, rows, drops, cw, lh = 18, timer = 0;
+  const rc = () => CH[Math.floor(Math.random() * CH.length)];
+  function layout() { const dpr = Math.min(devicePixelRatio || 1, 2); W = api.w; H = api.h; cv.width = W * dpr; cv.height = H * dpr; cv.style.width = W + "px"; cv.style.height = H + "px"; g.setTransform(dpr, 0, 0, dpr, 0, 0); g.fillStyle = "#000"; g.fillRect(0, 0, W, H); cw = Math.max(10, api.cw); cols = Math.floor(W / cw); rows = Math.floor(H / lh); drops = Array.from({ length: cols }, () => ({ y: -Math.random() * rows, v: 0.35 + Math.random() * 0.9 })); g.font = `${lh - 3}px "JetBrains Mono", monospace`; g.textBaseline = "top"; }
+  layout(); api.onResize(layout);
+  timer = setInterval(() => {
+    g.fillStyle = "rgba(0,0,0,0.14)"; g.fillRect(0, 0, W, H);
+    drops.forEach((d, i) => { const iy = Math.floor(d.y), x = i * cw; if (iy >= 0 && iy <= rows) { g.fillStyle = COL; g.fillText(rc(), x, (iy - 1) * lh); g.fillStyle = "#ffffff"; g.fillText(rc(), x, iy * lh); } d.y += d.v; if (d.y * 1 > rows + 2 && Math.random() > 0.96) { d.y = -Math.random() * 12; d.v = 0.35 + Math.random() * 0.9; } });
+  }, 55);
+  return { key(e) { const k = (e.key || "").toLowerCase(); if (k === "q" || k === "escape" || (k === "c" && e.ctrlKey)) api.exit(); }, stop() { clearInterval(timer); } };
+}
+function slApp(api) {
+  const pre = document.createElement("pre"); pre.className = "alt-pre"; api.root.appendChild(pre);
+  const T = [
+    "          __                                                                ",
+    "   ______||______       ____________       ____________       ____________  ",
+    "  |   _  _  _  _ |_____|  _  _  _  |_____|  _  _  _  |_____|  _  _  _  |  ",
+    "  |  |_||_||_||_|      |  |_||_||_|       |  |_||_||_|       |  |_||_||_|  ",
+    "  |_[]_____________    |____________|     |____________|     |____________|  ",
+    "   (O)=(O)(O)=(O)       (o)(o)(o)(o)       (o)(o)(o)(o)       (o)(o)(o)(o)   "
+  ];
+  const tw = T[0].length; let x = api.cols, tick = 0; const puffs = [];
+  const timer = setInterval(() => {
+    const cols = api.cols, rows = api.rows, y0 = Math.max(6, Math.floor(rows / 2) - 3);
+    const grid = Array.from({ length: rows }, () => Array(cols).fill(" "));
+    const put = (r, c, s) => { if (r < 0 || r >= rows) return; for (let i = 0; i < s.length; i++) { const cc = c + i; if (cc >= 0 && cc < cols && s[i] !== " ") grid[r][cc] = s[i]; } };
+    if (tick % 2 === 0) puffs.push({ x: x + 11, y: y0 - 1, a: 0 });
+    puffs.forEach(p => { p.a++; if (p.a % 3 === 0) p.y--; if (p.a % 4 === 0) p.x += 1; });
+    while (puffs.length && (puffs[0].y < 1 || puffs[0].a > 40)) puffs.shift();
+    puffs.forEach(p => put(p.y, p.x, p.a < 8 ? "(@@)" : p.a < 18 ? "( )" : p.a < 28 ? "o" : "."));
+    const wheel = tick % 4 < 2;
+    T.forEach((row, i) => put(y0 + i, x, i === 5 && wheel ? row.replace(/O/g, "0").replace(/o/g, "·") : row));
+    put(y0 + 6, 0, "=".repeat(cols));
+    pre.textContent = grid.map(r => r.join("")).join("\n");
+    x--; tick++; if (x < -tw - 8) api.exit();
+  }, 38);
+  return { key(e) { const k = (e.key || "").toLowerCase(); if (k === "q" || k === "escape" || (k === "c" && e.ctrlKey)) api.exit(); }, stop() { clearInterval(timer); } };
+}
+function htopApp(api) {
+  const pre = document.createElement("pre"); pre.className = "alt-pre ht"; api.root.appendChild(pre);
+  const th = Math.min(8, navigator.hardwareConcurrency || 4);
+  const PR = [["systemd", "root", 0.0, 0.1], ["systemd-journald", "root", 0.0, 0.2], ["systemd-logind", "root", 0.0, 0.1], ["dbus-broker", "dbus", 0.1, 0.1], ["NetworkManager", "root", 0.1, 0.3], ["pipewire", "guest", 0.4, 0.2], ["wireplumber", "guest", 0.2, 0.3], ["bash", "guest", 0.0, 0.1], ["portfolio --site aascharyapaudel.com.np", "guest", 3.1, 0.8], ["mpv assets/song.mp3", "guest", 1.4, 0.6], ["htop", "guest", 0.7, 0.1]];
+  const bar = (p, w, cls) => { const n = Math.min(w, Math.round(p / 100 * w * 2.5)); return `<span class="d">[</span><span class="${cls}">${"|".repeat(n)}</span>${" ".repeat(w - n)}<span class="d">]</span>`; };
+  function draw() {
+    const cols = api.cols, rows = api.rows, bw = Math.max(8, Math.floor(cols / 2) - 12); let s = "";
+    for (let i = 0; i < th; i++) { const p = 3 + Math.random() * (i === 0 ? 24 : 9); s += `<span class="a">${String(i + 1).padStart(3)}</span>${bar(p, bw, "g")}<span class="d">${p.toFixed(1).padStart(5)}%</span>\n`; }
+    s += `<span class="a">Mem</span>${bar(12, bw, "g")}<span class="d"> 1.9G/15.8G</span>\n<span class="a">Swp</span>${bar(0, bw, "e")}<span class="d"> 0K/0K</span>\n\n`;
+    const up = Math.floor((Date.now() - T_BOOT) / 1000); s += `Tasks: <span class="b">${PR.length + 24}</span>, <span class="b">${PR.length * 3 + 40}</span> thr; <span class="g">2</span> running   Load average: <span class="b">0.08 0.06 0.02</span>   Uptime: <span class="b">${pad2(Math.floor(up / 3600))}:${pad2(Math.floor(up / 60) % 60)}:${pad2(up % 60)}</span>\n\n`;
+    s += `<span class="ht-h">${"  PID USER       PRI  NI  VIRT   RES   SHR S CPU% MEM%   TIME+  Command".padEnd(cols)}</span>\n`;
+    PR.map((p, i) => ({ p, i, c: p[2] + Math.random() * 1.2 })).sort((a, b) => b.c - a.c).slice(0, Math.max(3, rows - th - 9)).forEach(({ p, i, c }) => { s += `${String(1 + i * 137 % 4900).padStart(5)} ${p[1].padEnd(10)} 20   0 ${("1" + i + "2M").padStart(5)} ${(40 + i * 7 + "M").padStart(5)} ${(8 + i + "M").padStart(5)} S ${c.toFixed(1).padStart(4)} ${p[3].toFixed(1).padStart(4)}  0:0${i % 6}.${pad2(i * 7 % 100)}  ${esc(p[0])}\n`; });
+    pre.innerHTML = s + `\n<span class="ht-f">F1</span>Help  <span class="ht-f">F5</span>Tree  <span class="ht-f">F9</span>Kill  <span class="ht-f">F10</span>Quit  <span class="d">(q also quits)</span>`;
+  }
+  draw(); const timer = setInterval(draw, 1200);
+  return { key(e) { const k = (e.key || "").toLowerCase(); if (k === "q" || k === "f10" || k === "escape" || (k === "c" && e.ctrlKey)) api.exit(); }, stop() { clearInterval(timer); } };
+}
+function vimApp(api, file, t) {
+  const pre = document.createElement("pre"); pre.className = "alt-pre vim"; api.root.appendChild(pre);
+  const node = file ? getNode(file, t.cwd) : null;
+  let L = node && node.t === "f" && !node.bin ? node.c.replace(/\n$/, "").split("\n") : [""];
+  let cx = 0, cy = 0, top = 0, mode = "n", cmd = "", pend = "", msg = file ? (node ? `"${file}" ${L.length}L, ${bytes(node.c)}B` : `"${file}" [New]`) : "", mod = false, reg = null;
+  const draw = () => {
+    const rows = api.rows - 1, cols = api.cols; if (cy < top) top = cy; if (cy >= top + rows) top = cy - rows + 1;
+    let s = ""; for (let r = 0; r < rows; r++) {
+      const i = top + r; if (i >= L.length) { s += `<span class="a">~</span>\n`; continue; }
+      const ln = L[i]; if (i !== cy) { s += esc(ln) + "\n"; continue; }
+      const c = Math.min(cx, Math.max(0, ln.length - (mode === "i" ? 0 : 1)));
+      s += esc(ln.slice(0, c)) + `<span class="vc">${esc(ln[c] || " ")}</span>` + esc(ln.slice(c + 1)) + "\n";
+    }
+    const left = mode === "c" ? ":" + cmd : mode === "i" ? "-- INSERT --" : msg, ruler = `${cy + 1},${Math.min(cx, Math.max(0, L[cy].length - 1)) + 1}`.padEnd(14) + (L.length <= rows ? "All" : Math.round(100 * top / (L.length - rows)) + "%");
+    s += `<span class="b">${esc(left)}</span>${" ".repeat(Math.max(1, cols - left.length - ruler.length))}${ruler}`; pre.innerHTML = s;
+  };
+  const clamp = () => { cy = Math.max(0, Math.min(L.length - 1, cy)); cx = Math.max(0, Math.min(mode === "i" ? L[cy].length : Math.max(0, L[cy].length - 1), cx)); };
+  const save = name => { const e = writeFile(name, L.join("\n") + "\n", false, t.cwd); if (e) { msg = `E212: Can't open file for writing`; return false; } mod = false; msg = `"${name}" ${L.length}L, ${bytes(L.join("\n") + "\n")}B written`; return true; };
+  const exec = () => {
+    const [c0, ...ar] = cmd.trim().split(/\s+/), name = ar[0] || file; cmd = ""; mode = "n";
+    if (c0 === "w") { if (!name) msg = "E32: No file name"; else save(name); }
+    else if (c0 === "q") { if (mod) msg = "E37: No write since last change (add ! to override)"; else api.exit(); }
+    else if (c0 === "q!") api.exit(); else if (c0 === "wq" || c0 === "x" || c0 === "wq!") { if (!name) msg = "E32: No file name"; else if (save(name)) api.exit(); }
+    else if (c0) msg = `E492: Not an editor command: ${c0}`;
+  };
+  draw(); api.onResize(draw);
+  return {
+    key(e) {
+      const k = e.key; if (e.ctrlKey && k.toLowerCase() === "c") { mode = "n"; msg = ""; pend = ""; draw(); return; }
+      if (mode === "i") {
+        if (k === "Escape") { mode = "n"; cx = Math.max(0, cx - 1); }
+        else if (k === "Enter") { const r = L[cy].slice(cx); L[cy] = L[cy].slice(0, cx); L.splice(++cy, 0, r); cx = 0; mod = true; }
+        else if (k === "Backspace") { if (cx > 0) { L[cy] = L[cy].slice(0, cx - 1) + L[cy].slice(cx); cx--; } else if (cy > 0) { cx = L[cy - 1].length; L[cy - 1] += L[cy]; L.splice(cy--, 1); } mod = true; }
+        else if (k === "ArrowLeft") cx--; else if (k === "ArrowRight") cx++; else if (k === "ArrowUp") cy--; else if (k === "ArrowDown") cy++;
+        else if (k === "Tab") { L[cy] = L[cy].slice(0, cx) + "  " + L[cy].slice(cx); cx += 2; mod = true; }
+        else if (k.length === 1 && !e.ctrlKey && !e.metaKey) { L[cy] = L[cy].slice(0, cx) + k + L[cy].slice(cx); cx++; mod = true; }
+        clamp(); draw(); return;
+      }
+      if (mode === "c") { if (k === "Escape") { mode = "n"; cmd = ""; } else if (k === "Enter") exec(); else if (k === "Backspace") { if (cmd) cmd = cmd.slice(0, -1); else mode = "n"; } else if (k.length === 1) cmd += k; draw(); return; }
+      msg = "";
+      if (pend === "d") { pend = ""; if (k === "d") { reg = L[cy]; L.splice(cy, 1); if (!L.length) L = [""]; mod = true; } }
+      else if (pend === "g") { pend = ""; if (k === "g") cy = 0; }
+      else if (pend === "Z") { pend = ""; if (k === "Z") { if (file ? save(file) : false) api.exit(); else if (!file) msg = "E32: No file name"; } }
+      else if (k === "d" || k === "g" || k === "Z") pend = k;
+      else if (k === "i") mode = "i"; else if (k === "a") { mode = "i"; cx++; } else if (k === "A") { mode = "i"; cx = L[cy].length; } else if (k === "I") { mode = "i"; cx = 0; }
+      else if (k === "o") { L.splice(++cy, 0, ""); cx = 0; mode = "i"; mod = true; } else if (k === "O") { L.splice(cy, 0, ""); cx = 0; mode = "i"; mod = true; }
+      else if (k === "x") { L[cy] = L[cy].slice(0, cx) + L[cy].slice(cx + 1); mod = true; } else if (k === "p" && reg != null) { L.splice(++cy, 0, reg); mod = true; }
+      else if (k === "h" || k === "ArrowLeft") cx--; else if (k === "l" || k === "ArrowRight") cx++; else if (k === "j" || k === "ArrowDown") cy++; else if (k === "k" || k === "ArrowUp") cy--;
+      else if (k === "0") cx = 0; else if (k === "$") cx = L[cy].length; else if (k === "G") cy = L.length - 1; else if (k === ":") { mode = "c"; cmd = ""; }
+      clamp(); draw();
+    }
+  };
+}
+function snakeApp(api, opts) {
+  const ACC = getComputedStyle(api.root).getPropertyValue("--acc").trim() || "#1793D1";
+  const root = api.root, cv = document.createElement("canvas"); cv.className = "alt-cv"; root.appendChild(cv); const g = cv.getContext("2d");
+  let best = 0; try { best = +(localStorage.getItem("ap-snake-best") || 0); } catch (_) {}
+  let W, H, cell, gx, gy, ox, oy, S, raf = 0, last = 0, acc = 0; const TOP = 40;
+  const DIRS = { u: [0, -1], d: [0, 1], l: [-1, 0], r: [1, 0] };
+  function layout() {
+    const dpr = Math.min(devicePixelRatio || 1, 2); W = api.w; H = api.h; cv.width = W * dpr; cv.height = H * dpr; cv.style.width = W + "px"; cv.style.height = H + "px"; g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const availH = H - TOP - 12; cell = Math.max(14, Math.min(30, Math.floor(Math.min((W - 16) / 18, availH / 12))));
+    const ngx = Math.min(44, Math.floor((W - 16) / cell)), ngy = Math.min(28, Math.floor(availH / cell));
+    ox = Math.floor((W - ngx * cell) / 2); oy = TOP + Math.floor((availH - ngy * cell) / 2) + 6;
+    if (!S || ngx !== gx || ngy !== gy) { gx = ngx; gy = ngy; reset(); }
+  }
+  function reset() { const sx = Math.floor(gx / 3), sy = Math.floor(gy / 2); S = { sn: [[sx, sy], [sx - 1, sy], [sx - 2, sy]], dir: DIRS.r, q: [], food: null, bonus: null, score: 0, eaten: 0, state: "ready", t: 0 }; place(); }
+  const free = (x, y) => !S.sn.some(s => s[0] === x && s[1] === y) && !(S.food && S.food[0] === x && S.food[1] === y);
+  function rnd() { let x, y, n = 0; do { x = Math.floor(Math.random() * gx); y = Math.floor(Math.random() * gy); } while (!free(x, y) && n++ < 500); return [x, y]; }
+  function place() { S.food = null; S.food = rnd(); }
+  const speed = () => Math.min(18, 7 + S.eaten * 0.4);
+  function turn(d) { const ref = S.q.length ? S.q[S.q.length - 1] : S.dir; if (d[0] === -ref[0] && d[1] === -ref[1]) return; if (d[0] === ref[0] && d[1] === ref[1]) return; if (S.q.length < 2) S.q.push(d); if (S.state === "ready") S.state = "play"; if (S.state === "paused") S.state = "play"; }
+  function step() {
+    if (S.q.length) S.dir = S.q.shift();
+    let hx = S.sn[0][0] + S.dir[0], hy = S.sn[0][1] + S.dir[1];
+    if (opts.wrap) { hx = (hx + gx) % gx; hy = (hy + gy) % gy; } else if (hx < 0 || hy < 0 || hx >= gx || hy >= gy) return die();
+    const tail = S.sn[S.sn.length - 1], ate = S.food[0] === hx && S.food[1] === hy, bon = S.bonus && S.bonus.x === hx && S.bonus.y === hy;
+    if (S.sn.some((s, i) => s[0] === hx && s[1] === hy && !(i === S.sn.length - 1 && !ate && !bon))) return die();
+    S.sn.unshift([hx, hy]);
+    if (ate) { S.score += 10; S.eaten++; place(); if (S.eaten % 5 === 0) { const [bx, by] = rnd(); S.bonus = { x: bx, y: by, t: 7 }; } }
+    else if (bon) { S.score += 30; S.bonus = null; } else S.sn.pop();
+    if (S.score > best) best = S.score;
+  }
+  function die() { S.state = "dead"; try { localStorage.setItem("ap-snake-best", String(best)); } catch (_) {} }
+  function rr(x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+  function draw(ts) {
+    g.fillStyle = "#07090D"; g.fillRect(0, 0, W, H);
+    g.font = '600 14px "JetBrains Mono", monospace'; g.textBaseline = "middle"; g.fillStyle = ACC; g.textAlign = "left"; g.fillText("SNAKE" + (opts.wrap ? " (wrap)" : ""), 14, 20);
+    g.fillStyle = "#D3DAE3"; g.textAlign = "center"; g.fillText("score " + S.score, W / 2, 20); g.textAlign = "right"; g.fillStyle = "#76828C"; g.fillText("best " + best + "   speed " + Math.round(speed()), W - 96, 20);
+    g.fillStyle = "#12171E"; rr(ox - 4, oy - 4, gx * cell + 8, gy * cell + 8, 8); g.fill(); g.strokeStyle = opts.wrap ? "#252F38" : ACC; g.lineWidth = 2; g.stroke();
+    g.fillStyle = "#1A212A"; for (let x = 0; x < gx; x++) for (let y = 0; y < gy; y++) if ((x + y) % 2 === 0) g.fillRect(ox + x * cell, oy + y * cell, cell, cell);
+    const pulse = 0.5 + 0.5 * Math.sin(ts / 180);
+    if (S.food) { const fx = ox + S.food[0] * cell + cell / 2, fy = oy + S.food[1] * cell + cell / 2; g.fillStyle = `rgba(224,108,117,${0.18 + 0.12 * pulse})`; g.beginPath(); g.arc(fx, fy, cell * (0.62 + 0.1 * pulse), 0, 6.283); g.fill(); g.fillStyle = "#E06C75"; g.beginPath(); g.arc(fx, fy, cell * 0.32, 0, 6.283); g.fill(); }
+    if (S.bonus) { const bx = ox + S.bonus.x * cell + cell / 2, by = oy + S.bonus.y * cell + cell / 2; g.fillStyle = "#E5C07B"; g.save(); g.translate(bx, by); g.rotate(ts / 400); g.fillRect(-cell * 0.28, -cell * 0.28, cell * 0.56, cell * 0.56); g.restore(); g.strokeStyle = "#E5C07B"; g.lineWidth = 2; g.beginPath(); g.arc(bx, by, cell * 0.5, -1.57, -1.57 + 6.283 * (S.bonus.t / 7)); g.stroke(); }
+    S.sn.forEach((s, i) => { const k = 1 - i / Math.max(S.sn.length, 8), pad = i === 0 ? 1 : 2; g.fillStyle = i === 0 ? "#3DB9F2" : `rgb(${Math.round(15 + 40 * k)},${Math.round(95 + 110 * k)},${Math.round(130 + 60 * k)})`; rr(ox + s[0] * cell + pad, oy + s[1] * cell + pad, cell - pad * 2, cell - pad * 2, cell * 0.28); g.fill(); });
+    const h = S.sn[0], ex = ox + h.x * 0 + h[0] * cell + cell / 2, ey = oy + h[1] * cell + cell / 2, px = S.dir[1] * cell * 0.2, py = S.dir[0] * cell * 0.2, fx = S.dir[0] * cell * 0.12, fy = S.dir[1] * cell * 0.12;
+    g.fillStyle = "#07090D"; g.beginPath(); g.arc(ex + fx + px, ey + fy + py, cell * 0.08, 0, 6.283); g.arc(ex + fx - px, ey + fy - py, cell * 0.08, 0, 6.283); g.fill();
+    if (S.state !== "play") {
+      g.fillStyle = "rgba(7,9,13,0.72)"; g.fillRect(0, TOP, W, H - TOP); g.textAlign = "center"; g.fillStyle = "#D3DAE3"; g.font = '700 22px "JetBrains Mono", monospace';
+      const msg = S.state === "ready" ? ["Ready", "arrows, WASD or swipe to start"] : S.state === "paused" ? ["Paused", "any direction to continue"] : ["Game over", "score " + S.score + (S.score && S.score >= best ? "  (new best!)" : "") + "  ·  Enter or R to play again"];
+      g.fillText(msg[0], W / 2, H / 2 - 12); g.font = '400 14px "JetBrains Mono", monospace'; g.fillStyle = "#76828C"; g.fillText(msg[1], W / 2, H / 2 + 16); g.fillText("space pauses, q quits", W / 2, H / 2 + 38);
+    }
+  }
+  function frame(ts) {
+    raf = requestAnimationFrame(frame); const dt = Math.min(100, ts - (last || ts)); last = ts;
+    if (S.state === "play") { acc += dt; const iv = 1000 / speed(); while (acc >= iv && S.state === "play") { acc -= iv; step(); } if (S.bonus) { S.bonus.t -= dt / 1000; if (S.bonus.t <= 0) S.bonus = null; } } else acc = 0;
+    draw(ts);
+  }
+  layout(); api.onResize(layout); raf = requestAnimationFrame(frame);
+  /* touch: swipe and an on-screen pad */
+  let sx0 = 0, sy0 = 0; root.addEventListener("touchstart", e => { sx0 = e.touches[0].clientX; sy0 = e.touches[0].clientY; }, { passive: true });
+  root.addEventListener("touchend", e => { const t = e.changedTouches[0], dx = t.clientX - sx0, dy = t.clientY - sy0; if (Math.max(Math.abs(dx), Math.abs(dy)) < 24) { if (S.state === "dead") reset(); return; } turn(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? DIRS.r : DIRS.l) : (dy > 0 ? DIRS.d : DIRS.u)); }, { passive: true });
+  if (matchMedia("(pointer:coarse)").matches) { const pad = document.createElement("div"); pad.className = "dpad"; pad.innerHTML = ["u", "l", "d", "r"].map(d => `<button type="button" data-d="${d}" class="dp-${d}" aria-label="${d}">${{ u: "▲", l: "◀", d: "▼", r: "▶" }[d]}</button>`).join(""); root.appendChild(pad); pad.addEventListener("pointerdown", e => { const b = e.target.closest("[data-d]"); if (!b) return; e.preventDefault(); if (S.state === "dead") reset(); turn(DIRS[b.dataset.d]); }); }
+  return {
+    key(e) {
+      const k = (e.key || "").toLowerCase(), map = { arrowup: "u", w: "u", k: "u", arrowdown: "d", s: "d", j: "d", arrowleft: "l", a: "l", h: "l", arrowright: "r", d: "r", l: "r" };
+      if (map[k]) { if (S.state === "dead") return; turn(DIRS[map[k]]); }
+      else if (k === " " || k === "p") { if (S.state === "play") S.state = "paused"; else if (S.state === "paused") S.state = "play"; else if (S.state === "ready") S.state = "play"; }
+      else if (k === "r" || (k === "enter" && S.state === "dead")) reset();
+      else if (k === "q" || k === "escape" || (k === "c" && e.ctrlKey)) api.exit();
+    },
+    stop() { cancelAnimationFrame(raf); try { localStorage.setItem("ap-snake-best", String(best)); } catch (_) {} }
+  };
+}
+
+/* ----- the terminal ----- */
+const body = $("#tbody"), tTitle = $("#tTitle");
+let current = null, started = false, touched = false;
+const NAMES = () => Object.keys(CM).concat(Object.keys(ALIAS), ["cd", "echo", "export", "alias", "unalias", "unset", "type", "history", "exit", "source", "help", "printf"]).filter((v, i, a) => v && a.indexOf(v) === i).sort();
+
+class Term {
+  constructor(parent, depth) {
+    this.parent = parent; this.depth = depth; this.hist = []; this.hi = 0; this.cwd = parent ? parent.cwd : HOME; this.child = null; this.busy = false; this.askRes = null; this.rs = null; this.tabs = 0; this.queue = [];
+    this.el = document.createElement("div"); if (depth > 1) this.el.className = "tm-inner";
+    this.out = document.createElement("div"); this.out.className = "tm-out";
+    this.form = document.createElement("form"); this.form.className = "tm-row";
+    this.label = document.createElement("label"); this.inp = document.createElement("input"); this.inp.id = "tin" + depth; this.label.htmlFor = this.inp.id;
+    Object.assign(this.inp, { type: "text", autocomplete: "off", spellcheck: false, autocapitalize: "none" }); this.inp.setAttribute("aria-label", "terminal input, shell " + depth);
+    this.form.append(this.label, this.inp); this.el.append(this.out, this.form); (parent ? parent.out : body).appendChild(this.el);
+    this.updatePrompt();
+    this.form.addEventListener("submit", e => { e.preventDefault(); const v = this.inp.value; this.inp.value = ""; if (this.askRes) { const r = this.askRes; this.askRes = null; this.inp.type = "text"; this.form.classList.add("busy"); this.print(esc(this.label.textContent)); r(v); return; } if (this.rs) { this.rs = null; } if (this.busy) { this.queue.push(v); return; } this.run(v); });
+    this.inp.addEventListener("keydown", e => this.key(e));
+  }
+  promptHTML() {
+    const p = pretty(this.cwd), dir = p === "~" ? "~" : p === "/" ? "/" : p.split("/").pop(), bad = (+ENV["?"] || 0) !== 0, st = RICE.prompt;
+    if (st === "plain") return `<span class="pr"><span class="br">[</span><span class="usr">${USER}@${HOSTN}</span> <span class="pth">${esc(dir)}</span><span class="br">]</span><span class="dl">$</span></span> `;
+    if (st === "lean") return `<span class="pr"><span class="pth">${esc(p)}</span> <span class="pl-sym${bad ? " bad" : ""}">❯</span></span> `;
+    if (st === "arrow") return `<span class="pr"><span class="usr">${USER}</span><span class="d">@</span><span class="a">${HOSTN}</span> <span class="pth">${esc(p)}</span> <span class="pl-sym${bad ? " bad" : ""}">❯</span></span> `;
+    return `<span class="pr"><span class="pl"><b class="p1">${USER}</b><b class="p2">${HOSTN}</b><b class="p3">${esc(dir)}</b></span><span class="pl-sym${bad ? " bad" : ""}">❯</span></span> `;
+  }
+  updatePrompt() { if (!this.askRes && !this.rs) this.label.innerHTML = this.promptHTML(); tTitle.textContent = `${USER}@${HOSTN}: ${pretty(current ? current.cwd : this.cwd)}`; $("#depthLbl").textContent = "bash" + ((current || this).depth > 1 ? " · level " + (current || this).depth : ""); }
+  print(html) { const d = document.createElement("div"); d.innerHTML = html; this.out.appendChild(d); this.scroll(); }
+  echo(raw) { const d = document.createElement("div"); d.innerHTML = this.promptHTML(); d.append(document.createTextNode(raw)); this.out.appendChild(d); }
+  scroll() { body.scrollTop = body.scrollHeight; }
+  focus() { if (ALT) ALT.sink.focus({ preventScroll: true }); else this.inp.focus({ preventScroll: true }); }
+  ask(label, secret) { return new Promise(res => { this.askRes = res; this.label.textContent = label; this.inp.type = secret ? "password" : "text"; this.inp.value = ""; this.form.classList.remove("busy"); this.focus(); }); }
+  async execLine(line, sig) {
+    PT = this; let seq; try { seq = build(tokenize(line), this); } catch (e) { this.print("bash: " + esc(e.message)); ENV["?"] = "2"; return 2; }
+    let code = +ENV["?"] || 0;
+    for (const it of seq) {
+      if (it.conn === "&&" && code !== 0) continue; if (it.conn === "||" && code === 0) continue;
+      PT = this; code = await runPipeline(this, it.pipe, sig); ENV["?"] = String(code);
+    }
+    return code;
+  }
+  async run(raw) {
+    if (this.busy || this.askRes) return;
+    let line = raw; if (line.trim() === "!!") line = this.hist[this.hist.length - 1] || "";
+    this.echo(line); const tl = line.trim(); if (!tl) return;
+    if (this.hist[this.hist.length - 1] !== tl) this.hist.push(tl); this.hi = this.hist.length;
+    this.busy = true; this.form.classList.add("busy"); const ac = new AbortController(); this.ac = ac;
+    try { await this.execLine(line, ac.signal); } catch (e) { if (e === ABORT) ENV["?"] = "130"; else this.print("bash: " + esc((e && e.message) || e)); }
+    this.busy = false; this.ac = null; if (!this.form.hidden) this.form.classList.remove("busy"); this.updatePrompt(); this.scroll(); if (fine || ALT) current.focus();
+    if (this.queue.length && !this.busy) { const nx = this.queue.shift(); this.run(nx); }
+  }
+  complete() {
+    const v = this.inp.value, pos = this.inp.selectionStart ?? v.length, head = v.slice(0, pos), m = /(\S*)$/.exec(head), word = m[1], start = pos - word.length, first = !/\S\s/.test(head.slice(0, start) + " ") || head.slice(0, start).trim() === "";
+    let cands;
+    if (first && !word.includes("/")) cands = NAMES().filter(n => n.startsWith(word));
+    else { const i = word.lastIndexOf("/"), dir = i < 0 ? "" : word.slice(0, i + 1), base = word.slice(i + 1), n = getNode(dir || ".", this.cwd); cands = n && n.t === "d" ? Object.keys(n.ch).filter(k => k.startsWith(base) && (base.startsWith(".") || !k.startsWith("."))).sort(cmp).map(k => dir + k + (n.ch[k].t === "d" || (n.ch[k].t === "l" && (walk(segsOf(dir + k, this.cwd)) || {}).t === "d") ? "/" : "")) : []; }
+    if (!cands.length) return;
+    let common = cands[0]; for (const x of cands) { while (!x.startsWith(common)) common = common.slice(0, -1); }
+    if (cands.length === 1) { this.inp.value = v.slice(0, start) + cands[0] + (cands[0].endsWith("/") ? "" : " ") + v.slice(pos); this.tabs = 0; }
+    else if (common.length > word.length) { this.inp.value = v.slice(0, start) + common + v.slice(pos); this.tabs = 0; }
+    else { this.tabs++; if (this.tabs >= 2) { this.echo(v); this.print(esc(cands.map(x => x.replace(/.*\/(?=.)/, "")).join("   "))); this.tabs = 0; } }
+  }
+  key(e) {
+    const k = e.key, inp = this.inp;
+    if (this.askRes) { if (e.ctrlKey && k.toLowerCase() === "c") { e.preventDefault(); const r = this.askRes; this.askRes = null; inp.type = "text"; inp.value = ""; this.print("^C"); this.form.classList.add("busy"); r(null); } return; }
+    if (this.busy) { if ((e.ctrlKey && k.toLowerCase() === "c") && this.ac) { e.preventDefault(); this.queue.length = 0; this.print("^C"); this.ac.abort(); } return; }
+    if (this.rs) { this.revSearch(e); return; }
+    if (k !== "Tab") this.tabs = 0;
+    if (k === "ArrowUp") { e.preventDefault(); if (this.hi > 0) inp.value = this.hist[--this.hi]; }
+    else if (k === "ArrowDown") { e.preventDefault(); this.hi = Math.min(this.hist.length, this.hi + 1); inp.value = this.hist[this.hi] || ""; }
+    else if (k === "Tab") { e.preventDefault(); this.complete(); }
+    else if (e.ctrlKey) {
+      const l = k.toLowerCase(), p = inp.selectionStart, v = inp.value;
+      if (l === "l") { e.preventDefault(); this.out.innerHTML = ""; }
+      else if (l === "c") { e.preventDefault(); this.echo(v + "^C"); inp.value = ""; }
+      else if (l === "a") { e.preventDefault(); inp.setSelectionRange(0, 0); } else if (l === "e") { e.preventDefault(); inp.setSelectionRange(v.length, v.length); }
+      else if (l === "u") { e.preventDefault(); inp.value = v.slice(p); inp.setSelectionRange(0, 0); } else if (l === "k") { e.preventDefault(); inp.value = v.slice(0, p); }
+      else if (l === "w") { e.preventDefault(); const b = v.slice(0, p).replace(/\s*\S*\s*$/, ""); inp.value = b + v.slice(p); inp.setSelectionRange(b.length, b.length); }
+      else if (l === "d" && !v) { e.preventDefault(); this.echo(""); this.run("exit"); }
+      else if (l === "r") { e.preventDefault(); this.rs = { q: "", at: this.hist.length }; this.label.textContent = "(reverse-i-search)`': "; }
+    }
+  }
+  revSearch(e) {
+    const k = e.key, r = this.rs; e.preventDefault();
+    const find = from => { for (let i = from - 1; i >= 0; i--) if (this.hist[i].includes(r.q)) return i; return -1; };
+    if (k === "Escape" || (e.ctrlKey && k.toLowerCase() === "g")) { this.rs = null; this.inp.value = ""; this.updatePrompt(); return; }
+    if (k === "Enter" || k.startsWith("Arrow")) { this.rs = null; this.updatePrompt(); if (k === "Enter") { const v = this.inp.value; this.inp.value = ""; this.run(v); } return; }
+    if (e.ctrlKey && k.toLowerCase() === "r") { const i = find(r.at); if (i >= 0) { r.at = i; this.inp.value = this.hist[i]; } }
+    else if (k === "Backspace") { r.q = r.q.slice(0, -1); const i = r.q ? find(this.hist.length) : -1; if (i >= 0) { r.at = i; this.inp.value = this.hist[i]; } else this.inp.value = ""; }
+    else if (k.length === 1 && !e.ctrlKey) { r.q += k; const i = find(r.at + 1); if (i >= 0) { r.at = i; this.inp.value = this.hist[i]; } else this.inp.value = ""; }
+    this.label.textContent = `(reverse-i-search)\`${r.q}': `;
+  }
+  spawn() {
+    if (this.depth >= 3) { this.print("bash: fork: retry: Resource temporarily unavailable"); return 1; }
+    this.form.hidden = true; ENV.SHLVL = String(this.depth + 1); this.child = new Term(this, this.depth + 1); current = this.child; this.child.updatePrompt(); this.child.focus();
+  }
+  async leave() {
+    if (!this.parent) { this.print("logout"); await nap(700).catch(() => {}); this.print(`\n<span class="d">Arch Linux ${KERNEL} (tty1)</span>\n\n${HOSTN} login: <span class="b">guest</span>\n<span class="d">Last login: ${dateStr()} on tty1</span>`); return; }
+    this.form.hidden = true; this.el.classList.add("done"); this.print("exit");
+    const p = this.parent; p.form.hidden = false; p.child = null; current = p; ENV.SHLVL = String(p.depth); p.updatePrompt(); if (fine) p.focus();
+  }
+}
+let rootTerm = null;
+function initTerm() {
+  buildFS(); applyRice(); setupBar(); setupTiles(); rootTerm = new Term(null, 1); current = rootTerm;
+  body.addEventListener("click", () => { if (!getSelection().toString()) current.focus(); });
+  $(".term").addEventListener("keydown", () => (touched = true));
+  $("#chips").addEventListener("click", e => { const b = e.target.closest("[data-cmd]"); if (!b) return; touched = true; current.run(b.dataset.cmd); });
+  $("#tFull").addEventListener("click", toggleFull);
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#desk").classList.contains("full") && !ALT) toggleFull(); });
+}
+function toggleFull() { const t = $("#desk"), on = t.classList.toggle("full"); document.documentElement.style.overflow = on ? "hidden" : ""; $("#tFull").textContent = on ? "⤡" : "⤢"; if (fine) current.focus(); }
+
+async function typeCmd(cmd) {
+  if (calm) { rootTerm.run(cmd); return; }
+  for (const ch of cmd) { if (touched) { rootTerm.inp.value = ""; return; } rootTerm.inp.value += ch; await sleep(55 + Math.random() * 60); }
+  await sleep(220); if (!touched) { const v = rootTerm.inp.value; rootTerm.inp.value = ""; await rootTerm.run(v); }
+}
+let booted = false, inView = false;
+async function boot() {
+  if (booted) return; booted = true;
+  rootTerm.print(`<span class="d">Arch Linux ${KERNEL} (tty1)</span>\n\n${HOSTN} login: <span class="b">guest</span>\n<span class="d">Last login: ${dateStr(new Date(Date.now() - 18 * 3600e3))} on tty1</span>`);
+  await sleep(calm ? 0 : 600); if (touched) return;
+  await typeCmd("neofetch");
+  rootTerm.print("<span class=\"d\">Type</span> help <span class=\"d\">for commands. Try</span> rice<span class=\"d\">,</span> cmatrix<span class=\"d\">,</span> sl<span class=\"d\">,</span> snake<span class=\"d\">,</span> htop<span class=\"d\">,</span> vim<span class=\"d\">.</span>\n");
+}
+initTerm();
+new IntersectionObserver(es => { inView = es[0].isIntersecting; if (inView && started) boot(); }, { threshold: 0.4 }).observe($(".term"));
+
+
+/* ----- hero: split the name into letters for the entrance ----- */
+(() => {
+  const h1 = $("#heroName"), name = h1.textContent.trim(); h1.setAttribute("aria-label", name); h1.textContent = "";
+  let ci = 0; name.split(/\s+/).forEach((w, wi) => { if (wi) h1.append(" "); const ws = document.createElement("span"); ws.className = "w"; ws.setAttribute("aria-hidden", "true"); [...w].forEach(c => { const cs = document.createElement("span"); cs.className = "ch"; cs.style.setProperty("--i", ci++); cs.textContent = c; ws.append(cs); }); h1.append(ws); });
+})();
+
+/* ----- enter screen: the click unlocks sound ----- */
+function enter(withSound) {
+  const g = $("#gate"); g.classList.add("out"); setTimeout(() => (g.hidden = true), calm ? 0 : 550);
+  if (withSound) Player.play();
+  started = true; $("#top").classList.add("in"); if (inView) boot();
+}
+$("#enterSound").addEventListener("click", () => enter(true));
+$("#enterQuiet").addEventListener("click", () => enter(false));
+$("#enterSound").focus({ preventScroll: true });
+</script>
+</body>
+</html>
